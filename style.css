@@ -1,8 +1,10 @@
+ /* set page color */
 html {background-color: lightblue}
 h1 {
     text-align: center;
     color: blue;
  }
+ /* for centering footer */
 body{
   min-height: 100vh;
   display: flex;
@@ -51,10 +53,12 @@ body{
   /* Change the background color of the dropdown button when the dropdown content is shown */
  .dropdown:hover .dropbtn {background-color: #3e8e41;}
 
+  /*set footer at bottom of page*/
 footer{
     margin-top: auto;
 }
 
+ /* center align home button */
 .Home {
   text-align: center;
 }
