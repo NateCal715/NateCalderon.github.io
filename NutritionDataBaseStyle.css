@@ -4,21 +4,42 @@ html{
 h1{
   text-align: center;
   color: blue;
- /* for centering footer */
-body{
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
 }
+
+.topnav {
+  background-color: white;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: blue;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: lightsteelblue;
+  color: white;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: lightskyblue;
+  color: blue;
+}
+
 p1{
   text-align: center;
+  color: blue;
+  font-size: large;
 }
 
 p2{
   text-align: center;
-}
-
- /*set footer at bottom of page*/
-footer{
-    margin-top: auto;
+  color: blue;
 }

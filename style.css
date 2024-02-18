@@ -1,10 +1,20 @@
  /* set page color */
 html {background-color: lightblue}
 h1 {
-    text-align: center;
-    color: blue;
+  text-align: center;
+  color: blue;
  }
 
+h2{
+  text-align: center;
+  color: blue;
+}
+
+p{
+  text-align: center;
+  color: blue;
+  font-size: large;
+}
 .topnav {
   background-color: white;
   overflow: hidden;
