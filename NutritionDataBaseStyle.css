@@ -1,0 +1,24 @@
+html{
+  background-color: lightblue;
+}
+h1{
+  text-align: center;
+  color: blue;
+ /* for centering footer */
+body{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+p1{
+  text-align: center;
+}
+
+p2{
+  text-align: center;
+}
+
+ /*set footer at bottom of page*/
+footer{
+    margin-top: auto;
+}
