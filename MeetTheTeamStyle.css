@@ -41,6 +41,7 @@ p{
   background-color: lightskyblue;
   color: blue;
 }
+/* I've been having trouble trying to center these img boxes, maybe I don't even need to differentiate and keep it like the figcaption */
 section
 {
  display: flex;
@@ -48,7 +49,6 @@ section
 figure1
 {
  float:center;
- 
 }
 figure2
 {
