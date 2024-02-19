@@ -47,7 +47,7 @@ section
 }
 figure1
 {
- float:left;
+ float:center;
  
 }
 figure2
@@ -64,7 +64,7 @@ figure4
 }
 figure5
 {
- float:right;
+ float:center;
 }
  figcaption
  {
