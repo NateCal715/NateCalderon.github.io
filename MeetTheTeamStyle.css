@@ -53,6 +53,21 @@ figure2
  float:center;
  text-align:center;
 }
+figure3
+{
+ float:center;
+ text-align:center;
+}
+figure4
+{
+ float:center;
+ text-align:center;
+}
+figure5
+{
+ float:right;
+ text-align:center;
+}
  figcaption
  {
   color:light grey;
