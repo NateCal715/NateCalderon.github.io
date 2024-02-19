@@ -41,7 +41,10 @@ p{
   background-color: lightskyblue;
   color: blue;
 }
-
+section
+{
+ display: flex;
+}
 figure1
 {
  float:left;
