@@ -44,9 +44,14 @@ p{
 
 figure1
 {
- float:left
+ float:left;
  text-align:center;
  
+}
+figure2
+{
+ float:center;
+ text-align:center;
 }
  figcaption
  {
