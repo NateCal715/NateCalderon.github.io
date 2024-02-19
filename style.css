@@ -22,7 +22,7 @@ p{
 
 /* Style the links inside the navigation bar */
 .topnav a {
-  float: center;
+  float: left;
   color: blue;
   text-align: center;
   padding: 14px 16px;
