@@ -1,17 +1,17 @@
  /* set page color */
-html {background-color: lightblue}
+html {background-color: #003366}
 h1 {
   text-align: center;
-  color: blue;
+  color: lightskyblue;
  }
 
 p{
   text-align: center;
-  color: blue;
+  color: lightblue;
   font-size: large;
 }
 .topnav {
-  background-color: white;
+  background-color: #b6f0f3;
   overflow: hidden;
 }
 
@@ -42,9 +42,9 @@ p{
 .button {
   display: inline-block;
   border-radius: 4px;
-  background-color: blue;
+  background-color: lightskyblue;
   border: none;
-  color: #FFFFFF;
+  color: blue;
   text-align: center;
   font-size: 28px;
   padding: 20px;
