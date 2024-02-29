@@ -1,13 +1,13 @@
 html{
-  background-color: lightblue;
+  background-color: #003366;
 }
 h1{
   text-align: center;
-  color: blue;
+  color: lightskyblue;
 }
 
 .topnav {
-  background-color: white;
+  background-color: #b6f0f3;
   overflow: hidden;
 }
 
@@ -35,11 +35,16 @@ h1{
 
 p1{
   text-align: center;
-  color: blue;
+  color: lightskyblue;
   font-size: large;
 }
 
 p2{
   text-align: center;
-  color: blue;
+  color: lightskyblue;
+}
+
+input[type=text] {
+  background-color: #3CBC8D;
+  color: white;
 }

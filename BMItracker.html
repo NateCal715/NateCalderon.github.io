@@ -13,16 +13,19 @@
       <a href="NutritionDataBase.html">Meal Planner</a>
       <a href="MeetTheTeam.html">Meet The Team!</a>
     </div>
-    <form>
-      <input type="radio" id="metric" name="units" value="metric">
-      <label for="metric">Metric (cm/kg)</label><br>
-      <input type="radio" id="imperial" name="units" value="imperial">
-      <label for="imperial">Imperial (in/lb)</label><br>
-      <label for="height">Height:</label><br>
-      <input type="text" id="height" name="height"><br>
-      <label for="weight">Weight:</label><br>
-      <input type="text" id="weight" name="weight">
-      <input type="submit" value="Send">
+    <form name="bmiForm" action="" method="GET">
+      <h3>BMI Calculator</h3>
+      <h4>Height</h4>
+      <label for="feet">Feet</label>
+      <input type="text" name="feetInput" value="">
+      <label for="inches">Inches</label>
+      <input type="text" name=inchesInput value="">
+      <br></br>
+      <h4>Weight</h4>
+      <label for="pounds">Pounds</label>
+      <input type="text" name="poundsInput" value="">
+      <br></br>
+      <input type="submit" value="Submit">
     </form>
   </body>
 </html>
