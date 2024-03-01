@@ -39,7 +39,19 @@ html{
     background-color: lightskyblue;
     color: blue;
   }
-
+  
+  p {
+    color: #b6f0f3;
+    text-align: center;
+  }
+  .button{
+    text-align: center;
+  }
+  .hide{
+    background-color: #b6f0f3;
+    color: blue; 
+    padding: 5px;
+  }
   form {
     background-color: lightskyblue;
     text-align: center;

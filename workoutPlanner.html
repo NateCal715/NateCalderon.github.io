@@ -13,6 +13,10 @@
       <a href="socialFeatures.html">Achieve and Share</a>
       <a href="MeetTheTeam.html">Meet The Team!</a>
     </div>
+    <p>Click hide if you would like to hide the BMI information</p>
+    <div class="button">
+      <button class="hide" onClick="hideBMI()">Hide</button>
+    </div>
     <form name="BMIform" action="" method="GET">
       <h3>BMI Calculator</h3>
       <h4>Height</h4>
@@ -25,9 +29,24 @@
       <label for="pounds">Pounds</label>
       <input type="text" name="poundsInput" value="">
       <br></br>
-      <input type="submit" value="Calculate">
+      <input type="submit" value="Calculate" onClick="BMIcalculator(BMIform)">
       <br></br>
     </form>
+    <h3 id="heading"></h3>
+    <script>
+      function BMIcalculator (form) {
+        let feet = form.feetInput.value;
+        let inches = form.inchesInput.value;
+        let centimeters = (feet + inches) * 30.48;
+        let pounds = form.poundsInput.value;
+        let kilograms = pounds / 2.205;
+        BMI = (kilograms) / (centimeters ** 2);
+        document.getElementById("heading").innerHTML = `Your BMI is ${kilograms}!`;
+      }
+      function hideBMI(){
+        BMIform.style.display = "none";
+      }
+    </script>
   </body>
 </html>
 <!--contains stepCounter-->
