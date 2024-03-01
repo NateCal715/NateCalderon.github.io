@@ -44,7 +44,7 @@ p2{
   color: lightskyblue;
 }
 
-input[type=text] {
+input[type=radio] {
   background-color: #3CBC8D;
   color: white;
 }

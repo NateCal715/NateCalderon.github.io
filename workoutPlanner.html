@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="workoutPlanner.css">
     <title>Workout Planner</title>
   </head>
   <body>
@@ -10,10 +10,24 @@
       <a class="active" href="index.html">Home</a>
       <a href="sleepTracker.html">Sleep Tracker</a>
       <a href="NutritionDataBase.html">Meal Planner</a>
-      <a href="BMItracker.html">BMI Tracker</a>
       <a href="socialFeatures.html">Achieve and Share</a>
       <a href="MeetTheTeam.html">Meet The Team!</a>
     </div>
+    <form name="BMIform" action="" method="GET">
+      <h3>BMI Calculator</h3>
+      <h4>Height</h4>
+      <label for="feet">Feet</label>
+      <input type="text" name="feetInput" value="">
+      <label for="inches">Inches</label>
+      <input type="text" name=inchesInput value="">
+      <br></br>
+      <h4>Weight</h4>
+      <label for="pounds">Pounds</label>
+      <input type="text" name="poundsInput" value="">
+      <br></br>
+      <input type="submit" value="Calculate">
+      <br></br>
+    </form>
   </body>
 </html>
 <!--contains stepCounter-->

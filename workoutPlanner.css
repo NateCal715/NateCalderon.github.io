@@ -1,0 +1,68 @@
+html{
+    background-color: #003366;
+  }
+  h1{
+    text-align: center;
+    color: blue;
+  }
+  h3{
+    text-align: center;
+    color: blue
+  }
+  h4{
+    text-align: center;
+    color: blue;
+  }
+  .topnav {
+    background-color: #b6f0f3;
+    overflow: hidden;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    color: blue;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: lightsteelblue;
+    color: white;
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    background-color: lightskyblue;
+    color: blue;
+  }
+
+  form {
+    background-color: lightskyblue;
+    text-align: center;
+    width: 350px;
+    margin: auto;
+  }    
+
+  input[type=text] {
+    background-color: #003366;
+    color: #b6f0f3;
+    width: 50px;
+  }
+  
+  input[type=submit] {
+    background-color: #003366;
+    color: #b6f0f3;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 8px;
+    pointer-events: auto;
+  }
+
+  label{
+    color: blue;
+  }
+  
