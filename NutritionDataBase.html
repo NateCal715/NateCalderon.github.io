@@ -96,6 +96,13 @@
      <input type="text" name="beverageInput" value=""><br>
    </form>
         <script>
+          hideMeals()
+          function hideMeals(){
+      mealformBreakfast.style.display = "none";
+      mealformLunch.style.display = "none";
+      mealformDinner.style.display = "none";
+      heading.style.display = "none";
+          }
           function showBreakfast(){
       mealformBreakfast.style.display = "block";
       mealformLunch.style.display = "none";
