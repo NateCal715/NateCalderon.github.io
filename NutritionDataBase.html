@@ -60,16 +60,62 @@
     </p1>
     <section>
       <p2>
-        Container for User Input (diet information, health restriction etc.)
-        <br></br>
-        What did you eat today!
-      <form name ="threeMealsaDay">
-      <input type="radio" id="Breakfast" name="Meals" value="Breakfast">
-      <label for="Breakfast">Breakfast</label><br>
-      <input type="radio" id="Lunch" name="Meals" value="Lunch">
-      <label for="Lunch">Lunch</label><br>
-      <input type="radio" id="Dinner" name="Meals" value="Dinner">
-      <label for="Dinner">Dinner</label><br>
+      <h2>What did you eat today!</h2>
+     <div class="breakfastButton">
+      <button class="Breakfast" onClick="showBreakfast()">Breakfast</button>
+     </div>
+       <div class="lunchButton">
+      <button class="Lunch" onClick="showLunch()">Lunch</button>
+       </div>
+       <div class="showDinner">
+      <button class="Dinner" onClick="showDinner()">Dinner</button>
+       </div>
+      <br></br>
+   <form name="mealformBreakfast" action="" method="GET">
+     <label for="entree">Entree</label>
+     <input type="text" name="entreeInput" value=""><br>
+     <label for="appetizer">Appetizer</label>
+     <input type="text" name="appetizerInput" value=""><br>
+     <label for="beverage">Beverage</label>
+     <input type="text" name="beverageInput" value=""><br>
+   </form>
+   <form name="mealformLunch" action="" method="GET">
+     <label for="entree">Entree</label>
+     <input type="text" name="entreeInput" value=""><br>
+     <label for="appetizer">Appetizer</label>
+     <input type="text" name="appetizerInput" value=""><br>
+     <label for="beverage">Beverage</label>
+     <input type="text" name="beverageInput" value=""><br>
+   </form>
+   <form name="mealformDinner" action="" method="GET">
+     <label for="entree">Entree</label>
+     <input type="text" name="entreeInput" value=""><br>
+     <label for="appetizer">Appetizer</label>
+     <input type="text" name="appetizerInput" value=""><br>
+     <label for="beverage">Beverage</label>
+     <input type="text" name="beverageInput" value=""><br>
+   </form>
+        <script>
+          function showBreakfast(){
+      mealformBreakfast.style.display = "block";
+      mealformLunch.style.display = "none";
+      mealformDinner.style.display = "none";
+      heading.style.display = "block";
+          }
+          function showLunch(){
+      mealformBreakfast.style.display = "none";
+      mealformLunch.style.display = "block";
+      mealformDinner.style.display = "none";
+      heading.style.display = "block";
+          }
+          function showDinner(){
+      mealformBreakfast.style.display = "none";
+      mealformLunch.style.display = "none";
+      mealformDinner.style.display = "block";
+      heading.style.display = "block";
+          }
+        </script>
+    
 
       
       <!-- Categories for Major Food Groups
@@ -90,14 +136,14 @@
       <label for="Protein">Protein</label><br> 
       </form> -->
 <br></br>
-      <h2>Water Intake</h2>
+      <h3>Water Intake</h3>
       <form name = "waterIntake">
         <label for="Water">Water</label>
         <input type="text" name="waterIntake" value="">
        
     </section>
 <section2>
-  <h3>You're Dietary journey thus far!</h3>
+  <h4>You're Dietary journey thus far!</h4>
   <figure1>
     <img src= "" alt="PlaceHolder" width="200px" height="200px">
     <figcaption>Graph presenting Caloric intake over time</figcaption>
