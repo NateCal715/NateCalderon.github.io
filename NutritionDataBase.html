@@ -36,12 +36,14 @@
       <input type="radio" id="Low-Card" name="restrictions" value="Condition">
       <label for="Low-Carb">Low-Carb</label><br>
       <input type="radio" id="Food-Allergies" name="restrictions" value="Condition">
-      <label for="Food-Allergies">Food-Allergies</label><br>
-      <div id="allergyBox" style="display: none;">
+      <label for="Food Allergies">Food Allergies</label><br>
+      </form>
+      <!-- Want to make it so when Food Allergies is selected, a text box appears and prompts users to input the specific Food(s) -->
+      <!-- <div id="allergyBox" style="display: none;">
       <label for="allergies">Enter Specific Food Allergies:</label><br>
       <input type="text" id="allergies" name="allergies"><br>
       </div>
-</form>
+
 
 <script>
     function showTextBox() {
@@ -52,7 +54,7 @@
             allergyBox.style.display = "none";
         }
     }
-</script>
+</script> --> 
       <br></br>
       Please enter your Dietary Information for Nutritional Recommendations
     </p1>
@@ -77,6 +79,11 @@
       <input type="radio" id="Protein" name="food groups" value="Protein">
       <label for="Protein">Protein</label><br>
       </form>
+<br></br>
+      <form name = "waterIntake">
+        <label> for="Water">Water</label>
+        <input type="text" name="Water">
+       
     </section>
   </body>
 </html>
