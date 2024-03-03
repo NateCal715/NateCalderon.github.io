@@ -46,7 +46,11 @@
 <script>
     function showTextBox() {
         var allergyBox = document.getElementById("allergyBox");
-        allergyBox.style.display = "block";
+        if (document.getElementById("FoodAllergies").checked) {
+            allergyBox.style.display = "block";
+        } else {
+            allergyBox.style.display = "none";
+        }
     }
 </script>
       <br></br>
