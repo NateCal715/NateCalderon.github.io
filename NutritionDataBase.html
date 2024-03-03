@@ -16,7 +16,8 @@
       <a href="signUp.html">Sign Up</a>
     </div>
     <p1>
-      Let's start with your special needs! Please click on any dietary restrictions that pertain to you.
+     <br></br>
+      Let's start with your special needs! Please click on any dietary restrictions that may pertain to you.
       <form name = "dietaryRestriction"> 
       <input type="radio" id="Lactose Intolerance" name="restrictions" value="Condition">
       <label for="Lactose Intolerance">Lactose Intolerance</label><br>
@@ -37,20 +38,101 @@
       <input type="radio" id="Low-Card" name="restrictions" value="Condition">
       <label for="Low-Carb">Low-Carb</label><br>
       <input type="radio" id="Food-Allergies" name="restrictions" value="Condition">
-      <label for="Food-Allergies">Food-Allergies</label><br>
+      <label for="Food Allergies">Food Allergies</label><br>
+      </form>
+      <!-- Want to make it so when Food Allergies is selected, a text box appears and prompts users to input specific Food(s) -->
+      <!-- <div id="allergyBox" style="display: none;">
+      <label for="allergies">Enter Specific Food Allergies:</label><br>
+      <input type="text" id="allergies" name="allergies"><br>
+      </div>
+
+
+<script>
+    function showTextBox() {
+        var allergyBox = document.getElementById("allergyBox");
+        if (document.getElementById("FoodAllergies").checked) {
+            allergyBox.style.display = "block";
+        } else {
+            allergyBox.style.display = "none";
+        }
+    }
+</script> --> 
       <br></br>
-      Please enter your Dietary Information for Nutritional Recommendations
+      
     </p1>
     <section>
       <p2>
-        Container for User Input (diet information, health restriction etc.)
-        <br></br>
-        Categories for Major Food Groups
-        <br></br>
-        <!-- I think we should make waterIntake and MealPlanner the same page and rename it to the Nutritional Database
-        I think it would streamline the step-by-step plan we're trying to implement and make the website much more concise and easier to nav-->
+      <h2>What did you eat today!</h2>
+     <div class="breakfastButton">
+      <button class="Breakfast" onClick="showBreakfast()">Breakfast</button>
+     </div>
+       <div class="lunchButton">
+      <button class="Lunch" onClick="showLunch()">Lunch</button>
+       </div>
+       <div class="showDinner">
+      <button class="Dinner" onClick="showDinner()">Dinner</button>
+       </div>
+      <br></br>
+   <form name="mealformBreakfast" action="" method="GET">
+     <label for="entree">Entree</label>
+     <input type="text" name="entreeInput" value=""><br>
+     <label for="appetizer">Appetizer</label>
+     <input type="text" name="appetizerInput" value=""><br>
+     <label for="beverage">Beverage</label>
+     <input type="text" name="beverageInput" value=""><br>
+   </form>
+   <form name="mealformLunch" action="" method="GET">
+     <label for="entree">Entree</label>
+     <input type="text" name="entreeInput" value=""><br>
+     <label for="appetizer">Appetizer</label>
+     <input type="text" name="appetizerInput" value=""><br>
+     <label for="beverage">Beverage</label>
+     <input type="text" name="beverageInput" value=""><br>
+   </form>
+   <form name="mealformDinner" action="" method="GET">
+     <label for="entree">Entree</label>
+     <input type="text" name="entreeInput" value=""><br>
+     <label for="appetizer">Appetizer</label>
+     <input type="text" name="appetizerInput" value=""><br>
+     <label for="beverage">Beverage</label>
+     <input type="text" name="beverageInput" value=""><br>
+   </form>
+        <script>
+          hideMeals();
+          function hideMeals(){
+      mealformBreakfast.style.display = "none";
+      mealformLunch.style.display = "none";
+      mealformDinner.style.display = "none";
+      heading.style.display = "none";
+          }
+          function showBreakfast(){
+      mealformBreakfast.style.display = "block";
+      mealformLunch.style.display = "none";
+      mealformDinner.style.display = "none";
+      heading.style.display = "block";
+          }
+          function showLunch(){
+      mealformBreakfast.style.display = "none";
+      mealformLunch.style.display = "block";
+      mealformDinner.style.display = "none";
+      heading.style.display = "block";
+          }
+          function showDinner(){
+      mealformBreakfast.style.display = "none";
+      mealformLunch.style.display = "none";
+      mealformDinner.style.display = "block";
+      heading.style.display = "block";
+          }
+        </script>
+    
+
+      
+      <!-- Categories for Major Food Groups
+        <br></br>  
       </p2>
-      <form name = "nutritionForm"> <!--copy pasted from BMI tracker, will repurpose for entering dietary intake info, thank you Celeste!-->
+      This may be overkill, maybe better to allow users to input what they ate specifically and let them provide necessessary info like Calories, Sugars, Fats, etc.
+      instead of trying to calculate that for them, should see how the API is going to be incorporated into the site
+      <form name = "nutritionForm"> <!--copy pasted from BMI tracker, will repurpose for entering dietary intake info, thank you Celeste!
       <input type="radio" id="Fruits" name="food groups" value="Fruits">
       <label for="Fruits">Fruits</label><br>
       <input type="radio" id="Grains" name="food groups" value="Grains">
@@ -60,9 +142,27 @@
       <input type="radio" id="Dairy" name="food groups" value="Dairy">
       <label for="Dairy">Dairy</label><br>
       <input type="radio" id="Protein" name="food groups" value="Protein">
-      <label for="Protein">Protein</label><br>
-      </form>
+      <label for="Protein">Protein</label><br> 
+      </form> -->
+<br></br>
+      <h3>Water Intake</h3>
+      <form name = "waterIntake">
+        <label for="Water">Water</label>
+        <input type="text" name="waterIntake" value="">
+       
     </section>
+<section2>
+  <h4>You're Dietary journey thus far!</h4>
+  <figure1>
+    <img src= "" alt="PlaceHolder" width="200px" height="200px">
+    <figcaption>Graph presenting Caloric intake over time</figcaption>
+  </figure1>
+</section2>
   </body>
+  <footer>
+    
+  </footer>
 </html>
+<!-- I think we should make waterIntake and MealPlanner the same page and rename it to the Nutritional Database
+        I think it would streamline the step-by-step plan we're trying to implement and make the website much more concise and easier to nav-->
 <!--contains calorieTracker and waterIntake-->
