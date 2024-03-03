@@ -37,6 +37,18 @@
       <label for="Low-Carb">Low-Carb</label><br>
       <input type="radio" id="Food-Allergies" name="restrictions" value="Condition">
       <label for="Food-Allergies">Food-Allergies</label><br>
+      <div id="allergyBox" style="display: none;">
+      <label for="allergies">Enter Specific Food Allergies:</label><br>
+      <input type="text" id="allergies" name="allergies"><br>
+      </div>
+</form>
+
+<script>
+    function showTextBox() {
+        var allergyBox = document.getElementById("allergyBox");
+        allergyBox.style.display = "block";
+    }
+</script>
       <br></br>
       Please enter your Dietary Information for Nutritional Recommendations
     </p1>
