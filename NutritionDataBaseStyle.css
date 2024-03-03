@@ -48,3 +48,8 @@ input[type=radio] {
   background-color: #3CBC8D;
   color: white;
 }
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+}
