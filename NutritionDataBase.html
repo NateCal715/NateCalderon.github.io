@@ -15,7 +15,7 @@
     </div>
     <p1>
      <br></br>
-      Let's start with your special needs! Please click on any dietary restrictions that pertain to you.
+      Let's start with your special needs! Please click on any dietary restrictions that may pertain to you.
       <form name = "dietaryRestriction"> 
       <input type="radio" id="Lactose Intolerance" name="restrictions" value="Condition">
       <label for="Lactose Intolerance">Lactose Intolerance</label><br>
@@ -38,7 +38,7 @@
       <input type="radio" id="Food-Allergies" name="restrictions" value="Condition">
       <label for="Food Allergies">Food Allergies</label><br>
       </form>
-      <!-- Want to make it so when Food Allergies is selected, a text box appears and prompts users to input the specific Food(s) -->
+      <!-- Want to make it so when Food Allergies is selected, a text box appears and prompts users to input specific Food(s) -->
       <!-- <div id="allergyBox" style="display: none;">
       <label for="allergies">Enter Specific Food Allergies:</label><br>
       <input type="text" id="allergies" name="allergies"><br>
@@ -62,12 +62,22 @@
       <p2>
         Container for User Input (diet information, health restriction etc.)
         <br></br>
-        Categories for Major Food Groups
-        <br></br>
-        <!-- I think we should make waterIntake and MealPlanner the same page and rename it to the Nutritional Database
-        I think it would streamline the step-by-step plan we're trying to implement and make the website much more concise and easier to nav-->
+        What did you eat today!
+      <form name ="threeMealsaDay">
+      <input type="radio" id="Breakfast" name="Meals" value="Breakfast">
+      <label for="Breakfast">Breakfast</label><br>
+      <input type="radio" id="Lunch" name="Meals" value="Lunch">
+      <label for="Lunch">Lunch</label><br>
+      <input type="radio" id="Dinner" name="Meals" value="Dinner">
+      <label for="Dinner">Dinner</label><br>
+
+      
+      <!-- Categories for Major Food Groups
+        <br></br>  
       </p2>
-      <form name = "nutritionForm"> <!--copy pasted from BMI tracker, will repurpose for entering dietary intake info, thank you Celeste!-->
+      This may be overkill, maybe better to allow users to input what they ate specifically and let them provide necessessary info like Calories, Sugars, Fats, etc.
+      instead of trying to calculate that for them, should see how the API is going to be incorporated into the site
+      <form name = "nutritionForm"> <!--copy pasted from BMI tracker, will repurpose for entering dietary intake info, thank you Celeste!
       <input type="radio" id="Fruits" name="food groups" value="Fruits">
       <label for="Fruits">Fruits</label><br>
       <input type="radio" id="Grains" name="food groups" value="Grains">
@@ -77,8 +87,8 @@
       <input type="radio" id="Dairy" name="food groups" value="Dairy">
       <label for="Dairy">Dairy</label><br>
       <input type="radio" id="Protein" name="food groups" value="Protein">
-      <label for="Protein">Protein</label><br>
-      </form>
+      <label for="Protein">Protein</label><br> 
+      </form> -->
 <br></br>
       <h2>Water Intake</h2>
       <form name = "waterIntake">
@@ -94,5 +104,10 @@
   </figure1>
 </section2>
   </body>
+  <footer>
+    
+  </footer>
 </html>
+<!-- I think we should make waterIntake and MealPlanner the same page and rename it to the Nutritional Database
+        I think it would streamline the step-by-step plan we're trying to implement and make the website much more concise and easier to nav-->
 <!--contains calorieTracker and waterIntake-->
