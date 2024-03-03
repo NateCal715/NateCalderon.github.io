@@ -12,11 +12,6 @@
       <a href="NutritionDataBase.html">Meal Planner</a>
       <a href="socialFeatures.html">Achieve and Share</a>
       <a href="MeetTheTeam.html">Meet The Team!</a>
-    </div class="hideMessage">
-    <p>Click hide if you would like to hide the BMI information</p>
-    <div class="hideButton">
-      <button class="hide" onClick="hideBMI()">Hide</button>
-      <br></br>
     </div>
     <div class="showMessage">
       <p>Click show if you would like to show the BMI information</p>
@@ -86,22 +81,14 @@
         BMIformMetric.style.display = "block";
       }
       function hideBMI(){
-        var x = document.getElementById("showButton");
         BMIformImperial.style.display = "none";
         BMIformMetric.style.display = "none";
         heading.style.display = "none";
-        hideMessage.style.display = "none";
-        showMessage.style.display = "block";
-        hideButton.style.display = "none";
-        x.style.display = "block";
-        buttonContainer.style.display = "none";
       }
       function showBMI(){
         BMIformImperial.style.display = "block";
         BMIformMetric.style.display = "none";
         heading.style.display = "block";
-        hideMessage.style.display = "block";
-        showButton.style.display = "none";
       }
     </script>
   </body>
