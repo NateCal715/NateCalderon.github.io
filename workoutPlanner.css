@@ -52,6 +52,14 @@ html{
     color: blue; 
     padding: 5px;
   }
+  .showButton{
+    text-align: center;
+  }
+  .show{
+    background-color: #b6f0f3;
+    color: blue; 
+    padding: 5px;
+  }
   form {
     background-color: lightskyblue;
     text-align: center;

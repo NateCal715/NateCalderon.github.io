@@ -12,10 +12,17 @@
       <a href="NutritionDataBase.html">Meal Planner</a>
       <a href="socialFeatures.html">Achieve and Share</a>
       <a href="MeetTheTeam.html">Meet The Team!</a>
-    </div>
+    </div class="hideMessage">
     <p>Click hide if you would like to hide the BMI information</p>
     <div class="hideButton">
       <button class="hide" onClick="hideBMI()">Hide</button>
+      <br></br>
+    </div>
+    <div class="showMessage">
+      <p>Click show if you would like to show the BMI information</p>
+    </div>
+    <div class="showButton">
+      <button class="show" onClick="showBMI()">Show</button>
       <br></br>
     </div>
     <div class="buttonContainer">
@@ -52,11 +59,11 @@
     </form>
     <p id="heading"></p>
     <script>
-      showImperial();
+      hideBMI();
       function BMIcalculatorImperial (form) {
         let feet = form.feetInput.value;
         let inches = form.inchesInput.value;
-        let height = (feet/10 * 12) + inches;
+        let height = feet * 12 + inches / 10;
         let pounds = form.poundsInput.value;
         let BMI = (pounds) / (height ** 2) * 703;
         BMI = BMI.toFixed(1);
@@ -79,9 +86,22 @@
         BMIformMetric.style.display = "block";
       }
       function hideBMI(){
+        var x = document.getElementById("showButton");
         BMIformImperial.style.display = "none";
         BMIformMetric.style.display = "none";
         heading.style.display = "none";
+        hideMessage.style.display = "none";
+        showMessage.style.display = "block";
+        hideButton.style.display = "none";
+        x.style.display = "block";
+        buttonContainer.style.display = "none";
+      }
+      function showBMI(){
+        BMIformImperial.style.display = "block";
+        BMIformMetric.style.display = "none";
+        heading.style.display = "block";
+        hideMessage.style.display = "block";
+        showButton.style.display = "none";
       }
     </script>
   </body>
