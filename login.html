@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="style.css">
-    <title>Health Tracker</title>
+    <link rel="stylesheet" href="login.css">
+    <title>Log In</title>
   </head>
   <body>
-    <h1>Health Tracker</h1>
+    <h1>Log In</h1>
 
     <nav class="topnav">
       <a class="active" href="index.html">Home</a>
@@ -14,12 +14,21 @@
       <a href="NutritionDataBase.html">Meal Planner</a>
       <a href="socialFeatures.html">Achieve and Share</a>
       <a href="MeetTheTeam.html">Meet The Team!</a>
-      <a href="login.html">Log In</a>
-      <a href="signUp.html">Sign Up</a>
+      <a href="SignUp.html">Sign Up</a>
     </nav>
-    <div class="container">
-      <button onClick="window.location.href='NutritionDataBase.html'" class="button" style="vertical-align:middle"><span>Start Here</span></button>
-    </div>
+    <form name="login" action="" method="GET">
+        <h3>Login</h3>
+        <label for="username">Username</label>
+        <br></br>
+        <input type="text" name="usernameInput" value="">
+        <br></br>
+        <label for="passsord">Password</label>
+        <br></br>
+        <input type="text" name="passwordInput" value="">
+        <br></br>
+        <input type="submit" value="Sign In">
+        <p>Don't have an account? <a href=signUp.html>Sign Up</a></p>
+      </form>
   </body>
   <!-- I think we should have a footer on every pg besides the Meet the Team pg (might be redundant depending on what we include in the footer)
   we could provide Address (arbitrary atp), Contact info, redirection links to an FAQ Forum, works cited links(APIs), etc. whatever we feel can go in the footer. --> 

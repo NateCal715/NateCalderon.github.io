@@ -1,16 +1,16 @@
-html {background-color: lightblue}
+html {background-color: #003366}
 h1 {
   text-align: center;
-  color: blue;
+  color: lightskyblue;
  }
 
 p{
   text-align: center;
-  color: blue;
+  color: lightskyblue;
   font-size: large;
 }
 .topnav {
-  background-color: white;
+  background-color: #b6f0f3;
   overflow: hidden;
 }
 

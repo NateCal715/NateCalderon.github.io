@@ -1,0 +1,105 @@
+ /* set page color */
+ html {background-color: #003366}
+ h1 {
+   text-align: center;
+   color: lightskyblue;
+   }
+ h3{
+    text-align: center;
+    color: blue
+  }
+ p{
+   text-align: center;
+   color: #003366;
+   font-size: large;
+ }
+ .topnav {
+   background-color: #b6f0f3;
+   overflow: hidden;
+ }
+ 
+ /* Style the links inside the navigation bar */
+ .topnav a {
+   float: left;
+   color: blue;
+   text-align: center;
+   padding: 14px 16px;
+   text-decoration: none;
+   font-size: 17px;
+ }
+ 
+ /* Change the color of links on hover */
+ .topnav a:hover {
+   background-color: lightsteelblue;
+   color: white;
+ }
+ 
+ /* Add a color to the active/current link */
+ .topnav a.active {
+   background-color: lightskyblue;
+   color: blue;
+ }
+ .container{
+   text-align: center;
+ }
+ .button {
+   display: inline-block;
+   border-radius: 4px;
+   background-color: lightskyblue;
+   border: none;
+   color: blue;
+   text-align: center;
+   font-size: 28px;
+   padding: 20px;
+   width: 200px;
+   transition: all 0.5s;
+   cursor: pointer;
+   margin: 5px;
+ }
+ 
+ .button span {
+   cursor: pointer;
+   display: inline-block;
+   position: relative;
+   transition: 0.5s;
+ }
+ 
+ .button span:after {
+   content: '\00bb';
+   position: absolute;
+   opacity: 0;
+   top: 0;
+   right: -20px;
+   transition: 0.5s;
+ }
+ 
+ .button:hover span {
+   padding-right: 25px;
+ }
+ 
+ .button:hover span:after {
+   opacity: 1;
+   right: 0;
+ }
+ form {
+    background-color: lightskyblue;
+    text-align: center;
+    width: 350px;
+    margin: auto;
+  }    
+
+  input[type=text] {
+    background-color: #003366;
+    color: #b6f0f3;
+    width: 150px;
+  }
+  
+  input[type=submit] {
+    background-color: #003366;
+    color: #b6f0f3;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 8px;
+    pointer-events: auto;
+  }
+ 

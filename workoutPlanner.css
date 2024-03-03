@@ -44,14 +44,6 @@ html{
     color: #b6f0f3;
     text-align: center;
   }
-  .hideButton{
-    text-align: center;
-  }
-  .hide{
-    background-color: #b6f0f3;
-    color: blue; 
-    padding: 5px;
-  }
   .showButton{
     text-align: center;
   }
@@ -63,7 +55,7 @@ html{
   form {
     background-color: lightskyblue;
     text-align: center;
-    width: 350px;
+    width: 400px;
     margin: auto;
   }    
 

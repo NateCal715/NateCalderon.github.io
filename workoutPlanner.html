@@ -12,6 +12,8 @@
       <a href="NutritionDataBase.html">Meal Planner</a>
       <a href="socialFeatures.html">Achieve and Share</a>
       <a href="MeetTheTeam.html">Meet The Team!</a>
+      <a href="login.html">Log In</a>
+      <a href="signUp.html">Sign Up</a>
     </div>
     <div class="showMessage">
       <p>Click show if you would like to show the BMI information</p>
@@ -52,7 +54,27 @@
       <input type="button" value="Calculate" onClick="BMIcalculatorMetric(this.form)">
       <br></br>
     </form>
-    <p id="heading"></p>
+    <p id="BMIvalue"></p>
+    <form name="stepform" action="" method="GET">
+      <h3>Step Counter</h3>
+      <label for="steps">Steps Walked</label>
+      <input type="text" name="stepInput" value="">
+      <input type="button" value="Log" onClick="stepCounter(this.form)">
+      <br></br>
+    </form>
+    <p id="stepValue"></p>
+    <br></br>
+    <form name="workoutForm" action="" method="GET">
+      <h3>What type of workout are you interested in</h3>
+      <label for="buildMuscle">Build Muscle</label>
+      <input type="radio" name="workout" id=buildMuscle value="">
+      <label for="loseWeight">Lose Weight</label>
+      <input type="radio" name="workout" id=loseWeight value="">
+      <label for="buildEdurance">Build Endurance</label>
+      <input type="radio" name="workout" id=buildEndurance value="">
+      <br>
+      <button type="button" onClick="getRadioValue()">Submit</button>
+    </form>
     <script>
       hideBMI();
       function BMIcalculatorImperial (form) {
@@ -62,7 +84,7 @@
         let pounds = form.poundsInput.value;
         let BMI = (pounds) / (height ** 2) * 703;
         BMI = BMI.toFixed(1);
-        document.getElementById("heading").innerHTML = `Your BMI is ${BMI}!`;
+        document.getElementById("BMIvalue").innerHTML = `Your BMI is ${BMI}!`;
       }
       function BMIcalculatorMetric (form) {
         let centimeters = form.centimeterInput.value;
@@ -70,7 +92,11 @@
         let kilograms = form.kilogramInput.value;
         let BMI = (kilograms) / (meters ** 2);
         BMI = BMI.toFixed(1);
-        document.getElementById("heading").innerHTML = `Your BMI is ${BMI}!`;
+        document.getElementById("BMIvalue").innerHTML = `Your BMI is ${BMI}`;
+      }
+      function stepCounter (form) {
+        let steps = form.stepInput.value;
+        document.getElementById("stepValue").innerHTML = `You walked ${steps} steps!`;
       }
       function showImperial(){
         BMIformImperial.style.display = "block";
@@ -89,6 +115,25 @@
         BMIformImperial.style.display = "block";
         BMIformMetric.style.display = "none";
         heading.style.display = "block";
+      }
+      function getRadioValue(){
+        if(document.getElementById("buildMuscle").checked){
+          displayBuildMuscle();
+        }
+        else if(document.getElementById("loseWeight").checked){
+          displayLoseWeight();
+        }
+        else{
+          displayBuildEndurance();
+        }
+      }
+      function displayBuildMuscle(){
+      }
+      function displayLoseWeight(){
+
+      }
+      function displayBuildEndurance(){
+
       }
     </script>
   </body>
