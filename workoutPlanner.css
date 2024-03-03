@@ -44,7 +44,7 @@ html{
     color: #b6f0f3;
     text-align: center;
   }
-  .button{
+  .hideButton{
     text-align: center;
   }
   .hide{
@@ -65,13 +65,20 @@ html{
     width: 50px;
   }
   
-  input[type=submit] {
+  input[type=button] {
     background-color: #003366;
     color: #b6f0f3;
     cursor: pointer;
     padding: 10px 15px;
     border-radius: 8px;
     pointer-events: auto;
+  }
+
+  .buttonContainer{
+    text-align: center;
+  }
+  .button{
+    background-color: #b6f0f3;
   }
 
   label{

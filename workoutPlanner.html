@@ -14,10 +14,15 @@
       <a href="MeetTheTeam.html">Meet The Team!</a>
     </div>
     <p>Click hide if you would like to hide the BMI information</p>
-    <div class="button">
+    <div class="hideButton">
       <button class="hide" onClick="hideBMI()">Hide</button>
+      <br></br>
     </div>
-    <form name="BMIform" action="" method="GET">
+    <div class="buttonContainer">
+      <button class="button"  style="vertical-align:middle" onClick="showImperial()">Imperial</button>
+      <button class ="button" style="vertical-align:middle" onClick="showMetric()">Metric</button>
+    </div>
+    <form name="BMIformImperial" action="" method="GET">
       <h3>BMI Calculator</h3>
       <h4>Height</h4>
       <label for="feet">Feet</label>
@@ -29,25 +34,54 @@
       <label for="pounds">Pounds</label>
       <input type="text" name="poundsInput" value="">
       <br></br>
-      <input type="button" value="Calculate" onClick="BMIcalculator(this.form)">
+      <input type="button" value="Calculate" onClick="BMIcalculatorImperial(this.form)">
       <br></br>
     </form>
-    <h3 id="heading"></h3>
+    <form name="BMIformMetric" action="" method="GET">
+      <h3>BMI Calculator</h3>
+      <h4>Height</h4>
+      <label for="centimeters">Centimeters</label>
+      <input type="text" name="centimeterInput" value="">
+      <br></br>
+      <h4>Weight</h4>
+      <label for="kilograms">Kilograms</label>
+      <input type="text" name="kilogramInput" value="">
+      <br></br>
+      <input type="button" value="Calculate" onClick="BMIcalculatorMetric(this.form)">
+      <br></br>
+    </form>
+    <p id="heading"></p>
     <script>
-      let BMI = 0;
-      function BMIcalculator (form) {
+      showImperial();
+      function BMIcalculatorImperial (form) {
         let feet = form.feetInput.value;
         let inches = form.inchesInput.value;
-        let centimeters = ((feet + inches) / 10) * 30.48;
-        let meters = centimeters / 100;
+        let height = (feet/10 * 12) + inches;
         let pounds = form.poundsInput.value;
-        let kilograms = pounds / 2.205;
-        BMI = (kilograms) / (meters ** 2);
+        let BMI = (pounds) / (height ** 2) * 703;
         BMI = BMI.toFixed(1);
         document.getElementById("heading").innerHTML = `Your BMI is ${BMI}!`;
       }
+      function BMIcalculatorMetric (form) {
+        let centimeters = form.centimeterInput.value;
+        let meters = centimeters / 100;
+        let kilograms = form.kilogramInput.value;
+        let BMI = (kilograms) / (meters ** 2);
+        BMI = BMI.toFixed(1);
+        document.getElementById("heading").innerHTML = `Your BMI is ${BMI}!`;
+      }
+      function showImperial(){
+        BMIformImperial.style.display = "block";
+        BMIformMetric.style.display = "none";
+      }
+      function showMetric(){
+        BMIformImperial.style.display = "none";
+        BMIformMetric.style.display = "block";
+      }
       function hideBMI(){
-        BMIform.style.display = "none";
+        BMIformImperial.style.display = "none";
+        BMIformMetric.style.display = "none";
+        heading.style.display = "none";
       }
     </script>
   </body>
