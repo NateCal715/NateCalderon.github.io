@@ -29,19 +29,22 @@
       <label for="pounds">Pounds</label>
       <input type="text" name="poundsInput" value="">
       <br></br>
-      <input type="submit" value="Calculate" onClick="BMIcalculator(BMIform)">
+      <input type="button" value="Calculate" onClick="BMIcalculator(this.form)">
       <br></br>
     </form>
     <h3 id="heading"></h3>
     <script>
+      let BMI = 0;
       function BMIcalculator (form) {
         let feet = form.feetInput.value;
         let inches = form.inchesInput.value;
-        let centimeters = (feet + inches) * 30.48;
+        let centimeters = ((feet + inches) / 10) * 30.48;
+        let meters = centimeters / 100;
         let pounds = form.poundsInput.value;
         let kilograms = pounds / 2.205;
-        BMI = (kilograms) / (centimeters ** 2);
-        document.getElementById("heading").innerHTML = `Your BMI is ${kilograms}!`;
+        BMI = (kilograms) / (meters ** 2);
+        BMI = BMI.toFixed(1);
+        document.getElementById("heading").innerHTML = `Your BMI is ${BMI}!`;
       }
       function hideBMI(){
         BMIform.style.display = "none";
