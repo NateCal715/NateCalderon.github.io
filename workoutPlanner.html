@@ -75,8 +75,26 @@
       <br>
       <button type="button" onClick="getRadioValue()">Submit</button>
     </form>
+    <div id = buildMuscleVideos>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/GViX8riaHX4?si=h4rV1BqnqHTboqkF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen name="buildMuscle1"></iframe>;
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/geK9GNKGRpo?si=a3by2kwUoguXHR8n" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen name="buildMuscle2"></iframe>;
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/SjSJU-LOLf8?si=PfOfrOW4mTIzcSru" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>;
+    </div>
+    <div id = loseWeightVideos>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/Crda1Sv9mks?si=iPCfprfTPXMy_p06" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>;
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/kg5hXfcVm6g?si=mS2269pGvGxxIFIQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>;
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/5YR2E-3pvy8?si=L46INuhbMGXM4Hq3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>;
+    </div>
+    <div id = buildEnduranceVideos>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/CYhn9no7tAo?si=Pr3w1xC5rRPkWcBy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>;
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/6Fr3LlLe0V8?si=ino7R6S233nDQ7eE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>;
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/RF_YiV3LA58?si=88P7v1R3_AOj1YSk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>;
+    </div>
     <script>
       hideBMI();
+      hideBuildMuscle();
+      hideLoseWeight();
+      hideBuildEndurance();
       function BMIcalculatorImperial (form) {
         let feet = form.feetInput.value;
         let inches = form.inchesInput.value;
@@ -109,12 +127,10 @@
       function hideBMI(){
         BMIformImperial.style.display = "none";
         BMIformMetric.style.display = "none";
-        heading.style.display = "none";
       }
       function showBMI(){
         BMIformImperial.style.display = "block";
         BMIformMetric.style.display = "none";
-        heading.style.display = "block";
       }
       function getRadioValue(){
         if(document.getElementById("buildMuscle").checked){
@@ -127,13 +143,35 @@
           displayBuildEndurance();
         }
       }
+      function hideBuildMuscle(){
+        var buildMuscleVideos = document.getElementById("buildMuscleVideos");
+        buildMuscleVideos.style.display = "none";
+      }
       function displayBuildMuscle(){
+       var buildMuscleVideos = document.getElementById("buildMuscleVideos");
+       buildMuscleVideos.style.display = "block";
+       hideLoseWeight();
+       hideBuildEndurance();
+      }
+      function hideLoseWeight(){
+        var loseWeightVideos = document.getElementById("loseWeightVideos");
+        loseWeightVideos.style.display = "none";
       }
       function displayLoseWeight(){
-
+       var loseWeightVideos = document.getElementById("loseWeightVideos");
+       loseWeightVideos.style.display = "block";
+       hideBuildMuscle();
+       hideBuildEndurance();
+      }
+      function hideBuildEndurance(){
+        var buildEnduraceVideos = document.getElementById("buildEnduranceVideos");
+        buildEnduranceVideos.style.display = "none";
       }
       function displayBuildEndurance(){
-
+        var buildEnduraceVideos = document.getElementById("buildEnduranceVideos");
+        buildEnduranceVideos.style.display = "block";
+        hideBuildMuscle();
+        hideLoseWeight();
       }
     </script>
   </body>
