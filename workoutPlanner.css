@@ -5,6 +5,10 @@ html{
     text-align: center;
     color: lightskyblue;
   }
+  h2{
+    color: #b6f0f3;
+    margin-left: 245px;
+  }
   h3{
     text-align: center;
     color: blue
@@ -83,4 +87,14 @@ html{
 
   label{
     color: blue;
+  }
+
+  .flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+
+  iframe{
+    margin-left: 110px;
   }

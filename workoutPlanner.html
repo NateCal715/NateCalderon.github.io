@@ -55,40 +55,45 @@
       <br></br>
     </form>
     <p id="BMIvalue"></p>
-    <form name="stepform" action="" method="GET">
-      <h3>Step Counter</h3>
-      <label for="steps">Steps Walked</label>
-      <input type="text" name="stepInput" value="">
-      <input type="button" value="Log" onClick="stepCounter(this.form)">
+    <div class="flex-container">
+      <form name="stepform" action="" method="GET">
+        <h3>Step Counter</h3>
+        <label for="steps">Steps Walked</label>
+        <input type="text" name="stepInput" value="">
+        <input type="button" value="Log" onClick="stepCounter(this.form)">
+        <br></br>
+      </form>
       <br></br>
-    </form>
-    <p id="stepValue"></p>
-    <br></br>
-    <form name="workoutForm" action="" method="GET">
-      <h3>What type of workout are you interested in</h3>
-      <label for="buildMuscle">Build Muscle</label>
-      <input type="radio" name="workout" id=buildMuscle value="">
-      <label for="loseWeight">Lose Weight</label>
-      <input type="radio" name="workout" id=loseWeight value="">
-      <label for="buildEdurance">Build Endurance</label>
-      <input type="radio" name="workout" id=buildEndurance value="">
-      <br>
-      <button type="button" onClick="getRadioValue()">Submit</button>
-    </form>
+      <form name="workoutForm" action="" method="GET">
+        <h3>What type of workout are you interested in</h3>
+        <label for="buildMuscle">Build Muscle</label>
+        <input type="radio" name="workout" id=buildMuscle value="">
+        <label for="loseWeight">Lose Weight</label>
+        <input type="radio" name="workout" id=loseWeight value="">
+        <label for="buildEdurance">Build Endurance</label>
+        <input type="radio" name="workout" id=buildEndurance value="">
+        <br>
+        <button type="button" onClick="getRadioValue()">Submit</button>
+      </form>
+    </div>
+    <h2 id="stepValue"></h2>
     <div id = buildMuscleVideos>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/GViX8riaHX4?si=h4rV1BqnqHTboqkF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen name="buildMuscle1"></iframe>;
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/geK9GNKGRpo?si=a3by2kwUoguXHR8n" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen name="buildMuscle2"></iframe>;
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/SjSJU-LOLf8?si=PfOfrOW4mTIzcSru" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>;
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/GViX8riaHX4?si=h4rV1BqnqHTboqkF" title="YouTube video player" frameborder="50" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>;
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/geK9GNKGRpo?si=a3by2kwUoguXHR8n" title="YouTube video player" frameborder="50" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>;
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/SjSJU-LOLf8?si=PfOfrOW4mTIzcSru" title="YouTube video player" frameborder="50" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>;
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/nG0zNBpGCb8?si=hfToz5s1TMFJSuh9" title="YouTube video player" frameborder="50" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
     <div id = loseWeightVideos>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/eW71SoYXDK8?si=puMSPsek_C1YkaNR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/kg5hXfcVm6g?si=mS2269pGvGxxIFIQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>;
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/5YR2E-3pvy8?si=L46INuhbMGXM4Hq3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>;
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/eW71SoYXDK8?si=puMSPsek_C1YkaNR" title="YouTube video player" frameborder="50" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/kg5hXfcVm6g?si=mS2269pGvGxxIFIQ" title="YouTube video player" frameborder="50" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>;
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/5YR2E-3pvy8?si=L46INuhbMGXM4Hq3" title="YouTube video player" frameborder="50" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>;
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/Q-n2SOnyr1Y?si=B9CTF432fv7Dxaqr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
     <div id = buildEnduranceVideos>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/CYhn9no7tAo?si=Pr3w1xC5rRPkWcBy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>;
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/6Fr3LlLe0V8?si=ino7R6S233nDQ7eE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>;
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/RF_YiV3LA58?si=88P7v1R3_AOj1YSk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>;
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/CYhn9no7tAo?si=Pr3w1xC5rRPkWcBy" title="YouTube video player" frameborder="50" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>;
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/6Fr3LlLe0V8?si=ino7R6S233nDQ7eE" title="YouTube video player" frameborder="50" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>;
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/RF_YiV3LA58?si=88P7v1R3_AOj1YSk" title="YouTube video player" frameborder="50" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>;
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/h4r7mO61pkE?si=ajPRqdGxNkK1sKIE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
     <script>
       hideBMI();
