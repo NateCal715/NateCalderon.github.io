@@ -1,19 +1,145 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <link rel="stylesheet" href="style.css">
-    <title>Sleep Tracker</title>
-  </head>
-  <body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sleep Tracker</title>
+  <link rel="stylesheet" href="sleepTracker.css">
+</head>
+<body>
+<div class="container">
+  <header>
     <h1>Sleep Tracker</h1>
-    <div class="topnav">
-      <a class="active" href="index.html">Home</a>
-      <a href="workoutPlanner.html">Workout Planner</a>
-      <a href="NutritionDataBase.html">Meal Planner</a>
-      <a href="socialFeatures.html">Achieve and Share</a>
-      <a href="MeetTheTeam.html">Meet The Team!</a>
-      <a href="login.html">Log In</a>
-      <a href="signUp.html">Sign Up</a>
+  </header>
+  <nav class="topnav">
+    <a class="active" href="index.html">Home</a>
+    <a href="sleepTracker.html">Sleep Tracker</a>
+    <a href="NutritionDataBase.html">Meal Planner</a>
+    <a href="socialFeatures.html">Achieve and Share</a>
+    <a href="MeetTheTeam.html">Meet The Team!</a>
+    <a href="login.html">Log In</a>
+    <a href="signUp.html">Sign Up</a>
+  </nav>
+  <main>
+    <section class="sleep-log">
+      <h2>Log Daily Sleep Hours</h2>
+      <label for="monthSelector">Select Month:</label>
+      <select id="monthSelector" onchange="createDayInputs(this.value, new Date().getFullYear())">
+        <!-- Options added by JavaScript -->
+      </select>
+      <div id="dailySleepInputs">
+        <!-- Daily inputs added by JavaScript -->
+      </div>
+      <button type="button" onclick="calculateSleep()">Calculate</button>
+      <div id="sleepStats">
+        <p>Average Sleep This Month: <span id="averageSleep">0</span> hours</p>
+        <p>Total Sleep This Month: <span id="totalSleepMonth">0</span> hours</p>
+        <p>Total Sleep This Year: <span id="totalSleepYear">0</span> hours</p>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="footer">
     </div>
-  </body>
+  </footer>
+</div>
+<script>
+  let monthlySleepLogs = {};
+
+  function createMonthSelector() {
+    const monthSelector = document.getElementById('monthSelector');
+    const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    months.forEach((month, index) => {
+      const option = document.createElement('option');
+      option.value = index;
+      option.textContent = month;
+      monthSelector.appendChild(option);
+    });
+  }
+
+  function getCurrentYearMonth() {
+    const monthSelector = document.getElementById('monthSelector');
+    const month = parseInt(monthSelector.value, 10);
+    const year = new Date().getFullYear();
+    return `${year}-${month}`;
+  }
+
+  function createDayInputs() {
+    const container = document.getElementById('dailySleepInputs');
+    container.innerHTML = ''; // Clear existing inputs
+    const month = parseInt(document.getElementById('monthSelector').value, 10);
+    const year = new Date().getFullYear();
+    const daysInMonth = new Date(year, month + 1, 0).getDate();
+    const yearMonthKey = getCurrentYearMonth();
+
+    for (let day = 1; day <= daysInMonth; day++) {
+      const input = document.createElement('input');
+      input.type = 'number';
+      input.name = `day${day}`;
+      input.placeholder = `Day ${day} hours`;
+
+      // Repopulate saved data if available
+      if (monthlySleepLogs[yearMonthKey] && monthlySleepLogs[yearMonthKey][day]) {
+        input.value = monthlySleepLogs[yearMonthKey][day];
+      }
+
+      container.appendChild(input);
+    }
+  }
+
+  function saveCurrentMonthData() {
+    const inputs = document.querySelectorAll('#dailySleepInputs input');
+    const yearMonthKey = getCurrentYearMonth();
+    monthlySleepLogs[yearMonthKey] = {};
+
+    inputs.forEach((input, index) => {
+      if (input.value) {
+        monthlySleepLogs[yearMonthKey][index + 1] = parseFloat(input.value);
+      }
+    });
+
+    saveSleepData();
+  }
+
+  function calculateSleep() {
+    saveCurrentMonthData(); // Save data before calculation
+    const yearMonthKey = getCurrentYearMonth();
+    const monthlyData = Object.values(monthlySleepLogs[yearMonthKey] || {});
+    const monthlyTotal = monthlyData.reduce((acc, val) => acc + val, 0);
+    const average = monthlyData.length > 0 ? monthlyTotal / monthlyData.length : 0;
+
+    document.getElementById('averageSleep').textContent = average.toFixed(2);
+    document.getElementById('totalSleepMonth').textContent = monthlyTotal.toFixed(2);
+
+    const yearlyTotal = Object.values(monthlySleepLogs).flatMap(obj => Object.values(obj))
+            .reduce((acc, val) => acc + val, 0);
+    document.getElementById('totalSleepYear').textContent = yearlyTotal.toFixed(2);
+  }
+
+  function saveSleepData() {
+    localStorage.setItem('monthlySleepLogs', JSON.stringify(monthlySleepLogs));
+  }
+
+  function loadSleepData() {
+    const data = localStorage.getItem('monthlySleepLogs');
+    if (data) {
+      monthlySleepLogs = JSON.parse(data);
+    }
+  }
+
+  window.onload = function() {
+    loadSleepData();
+    createMonthSelector();
+    document.getElementById('monthSelector').addEventListener('change', function() {
+      saveCurrentMonthData(); // Save current month data before switching
+      createDayInputs();
+    });
+    const currentMonth = new Date().getMonth();
+    document.getElementById('monthSelector').value = currentMonth;
+    createDayInputs();
+    calculateSleep(); // Initial calculation based on loaded data
+  };
+</script>
+
+</body>
 </html>
