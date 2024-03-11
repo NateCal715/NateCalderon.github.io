@@ -20,6 +20,24 @@
     <div class="container">
       <button onClick="window.location.href='NutritionDataBase.html'" class="button" style="vertical-align:middle"><span>Start Here</span></button>
     </div>
+    <div class="flex-container">
+      <div class="BMI">
+        <h2 id="BMIvalue"></h2>
+      </div>
+      <div class="sleep">
+        <h2 id="sleepValue"></h2>
+      </div>
+      <div class="steps">
+        <h2 id="stepsValue"></h2>
+      </div>
+    </div>
+    <script>
+      showValues();
+      function showValues(){
+        document.getElementById("result").innerHTML = localStorage.getItem("BMInumber");
+        document.getElementById("BMIvalue").innerHTML = `Your BMI is `;
+      }
+    </script>
   </body>
   <!-- I think we should have a footer on every pg besides the Meet the Team pg (might be redundant depending on what we include in the footer)
   we could provide Address (arbitrary atp), Contact info, redirection links to an FAQ Forum, works cited links(APIs), etc. whatever we feel can go in the footer. --> 

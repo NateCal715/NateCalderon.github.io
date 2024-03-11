@@ -7,7 +7,7 @@ html{
   }
   h2{
     color: #b6f0f3;
-    margin-left: 245px;
+    display: inline;
   }
   h3{
     text-align: center;
@@ -46,10 +46,12 @@ html{
   
   p {
     color: #b6f0f3;
+  }
+  .showMessage{
     text-align: center;
   }
   .showButton{
-    text-align: center;
+    text-align: left;
   }
   .show{
     background-color: #b6f0f3;
@@ -60,6 +62,7 @@ html{
     background-color: lightskyblue;
     text-align: center;
     width: 400px;
+    height: 300px;
     margin: auto;
   }    
 
@@ -79,14 +82,22 @@ html{
   }
 
   .buttonContainer{
-    text-align: center;
+    text-align: left;
   }
   .button{
     background-color: #b6f0f3;
+    color: blue;
+    margin-right: 10px;
+    margin-left: 10px;
   }
 
   label{
     color: blue;
+  }
+
+  img{
+    height: 180px;
+    width: 180px;
   }
 
   .flex-container {

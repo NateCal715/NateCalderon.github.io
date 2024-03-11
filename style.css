@@ -4,6 +4,9 @@ h1 {
   text-align: center;
   color: lightskyblue;
  }
+h2{
+  color: blue;
+}
 
 p{
   text-align: center;
@@ -77,4 +80,28 @@ p{
 .button:hover span:after {
   opacity: 1;
   right: 0;
+}
+
+.flex-container {
+  display: flex;
+  flex-flow: column;
+  align-content: flex-end;
+  width: 200px;
+  height: 560px;
+  justify-content: flex-end;
+}
+
+.BMI{
+  background-color: lightblue;
+  height: 150px;
+}
+
+.sleep{
+  background-color: lightskyblue;
+  height: 150px;
+}
+
+.steps{
+  background-color: lightsteelblue;
+  height: 150px;
 }

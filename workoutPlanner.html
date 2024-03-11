@@ -16,16 +16,13 @@
       <a href="signUp.html">Sign Up</a>
     </div>
     <div class="showMessage">
-      <p>Click show if you would like to show the BMI information</p>
-    </div>
-    <div class="showButton">
+      <h2>Click show if you would like to show the BMI information</h2> 
       <button class="show" onClick="showBMI()">Show</button>
-      <br></br>
+      <button class="button" onClick="showImperial()">Imperial</button>
+      <button class ="button" onClick="showMetric()">Metric</button>
+      <br>
     </div>
-    <div class="buttonContainer">
-      <button class="button"  style="vertical-align:middle" onClick="showImperial()">Imperial</button>
-      <button class ="button" style="vertical-align:middle" onClick="showMetric()">Metric</button>
-    </div>
+    <div class="flex-container">
     <form name="BMIformImperial" action="" method="GET">
       <h3>BMI Calculator</h3>
       <h4>Height</h4>
@@ -33,37 +30,37 @@
       <input type="text" name="feetInput" value="">
       <label for="inches">Inches</label>
       <input type="text" name=inchesInput value="">
-      <br></br>
+      <br>
       <h4>Weight</h4>
       <label for="pounds">Pounds</label>
       <input type="text" name="poundsInput" value="">
-      <br></br>
+      <br>
       <input type="button" value="Calculate" onClick="BMIcalculatorImperial(this.form)">
-      <br></br>
+      <br>
     </form>
     <form name="BMIformMetric" action="" method="GET">
       <h3>BMI Calculator</h3>
       <h4>Height</h4>
       <label for="centimeters">Centimeters</label>
       <input type="text" name="centimeterInput" value="">
-      <br></br>
+      <br>
       <h4>Weight</h4>
       <label for="kilograms">Kilograms</label>
       <input type="text" name="kilogramInput" value="">
-      <br></br>
+      <br>
       <input type="button" value="Calculate" onClick="BMIcalculatorMetric(this.form)">
-      <br></br>
+      <br>
     </form>
-    <p id="BMIvalue"></p>
-    <div class="flex-container">
+    <h2 id="BMIvalue"></h2>
       <form name="stepform" action="" method="GET">
         <h3>Step Counter</h3>
         <label for="steps">Steps Walked</label>
         <input type="text" name="stepInput" value="">
         <input type="button" value="Log" onClick="stepCounter(this.form)">
-        <br></br>
+        <br>
+        <img src="https://i.pinimg.com/originals/11/c9/fa/11c9fa859c9e9402067f03054e62ea57.png" alt="Running shoes">
       </form>
-      <br></br>
+      <br>
       <form name="workoutForm" action="" method="GET">
         <h3>What type of workout are you interested in</h3>
         <label for="buildMuscle">Build Muscle</label>
@@ -74,6 +71,8 @@
         <input type="radio" name="workout" id=buildEndurance value="">
         <br>
         <button type="button" onClick="getRadioValue()">Submit</button>
+        <br>
+        <img src="https://cdn3.iconfinder.com/data/icons/sport-40/1772/Vinyl_Dumbbells_Aerobics_Fitness_Exercise-512.png" alt="Weights">
       </form>
     </div>
     <h2 id="stepValue"></h2>
@@ -108,6 +107,7 @@
         let BMI = (pounds) / (height ** 2) * 703;
         BMI = BMI.toFixed(1);
         document.getElementById("BMIvalue").innerHTML = `Your BMI is ${BMI}!`;
+        localStorage.setItem("BMInumber", "BMI");
       }
       function BMIcalculatorMetric (form) {
         let centimeters = form.centimeterInput.value;
@@ -116,6 +116,7 @@
         let BMI = (kilograms) / (meters ** 2);
         BMI = BMI.toFixed(1);
         document.getElementById("BMIvalue").innerHTML = `Your BMI is ${BMI}`;
+        localStorage.setItem("BMInumber", "BMI");
       }
       function stepCounter (form) {
         let steps = form.stepInput.value;
@@ -144,7 +145,7 @@
         else if(document.getElementById("loseWeight").checked){
           displayLoseWeight();
         }
-        else{
+        else if(document.getElementById("buildEndurance").checked){
           displayBuildEndurance();
         }
       }
