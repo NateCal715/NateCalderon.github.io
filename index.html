@@ -22,13 +22,13 @@
     </div>
     <div class="flex-container">
       <div class="BMI">
-        <h2 id="BMIvalue"></h2>
+        <img id="chart" src="https://static.javatpoint.com/ds/images/line-graph7.png" alt="chart">
       </div>
       <div class="sleep">
-        <h2 id="sleepValue"></h2>
+        <img id="plate" src="https://myplate-prod.azureedge.us/sites/default/files/styles/medium/public/2020-11/myplate-brand--labelled.png?itok=7VtFXcBC" alt="plate">
       </div>
       <div class="steps">
-        <h2 id="stepsValue"></h2>
+        <img id="swimming" src="https://i.postimg.cc/QVGLJQkZ/360-F-131235727-i-Qhj-FBr0dsuas-A4w-VLad-ZI4-Kqg-P7-Y0b6-removebg-preview.png" alt="swimming">
       </div>
       <div class="logo">
         <img src="https://i.postimg.cc/8knbNJ9V/Health-Tracker-removebg-preview.png" alt="Logo">
@@ -39,6 +39,8 @@
       function showValues(){
         document.getElementById("result").innerHTML = localStorage.getItem("BMInumber");
         document.getElementById("BMIvalue").innerHTML = `Your BMI is `;
+        document.getElementById("sleepValue").innerHTML = `You slept last night`;
+        BMIvalue.style.display = "inline";
       }
     </script>
   </body>

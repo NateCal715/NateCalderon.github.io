@@ -7,7 +7,9 @@ h1 {
 h2{
   color: blue;
 }
-
+h4{
+  color: white;
+}
 p{
   text-align: center;
   color: lightblue;
@@ -116,4 +118,21 @@ p{
 img{
   height: 500px;
   width: 500px;
+}
+
+#chart{
+  height: 140px;
+  width: 140px;
+  margin-left: 33px;
+}
+
+#plate{
+  height: 140px;
+  width: 180px;
+  margin-left: 10px;
+}
+
+#swimming{
+  height: 140px;
+  width: 200px;
 }
