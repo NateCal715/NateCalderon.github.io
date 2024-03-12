@@ -109,3 +109,7 @@ html{
   iframe{
     margin-left: 110px;
   }
+
+  .messages{
+    text-align: center;
+  }

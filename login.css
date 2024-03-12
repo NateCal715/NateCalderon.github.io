@@ -102,4 +102,10 @@
     border-radius: 8px;
     pointer-events: auto;
   }
+
+  img{
+    height: 178px;
+    width: 178px;
+  }
+
  

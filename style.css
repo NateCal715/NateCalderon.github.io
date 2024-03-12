@@ -85,23 +85,35 @@ p{
 .flex-container {
   display: flex;
   flex-flow: column;
-  align-content: flex-end;
   width: 200px;
-  height: 560px;
-  justify-content: flex-end;
+  height: 500px;
+  flex-wrap: wrap;
+  align-items: flex-end;
 }
 
 .BMI{
   background-color: lightblue;
-  height: 150px;
+  height: 160px;
+  width: 200px;
 }
 
 .sleep{
   background-color: lightskyblue;
-  height: 150px;
+  height: 160px;
+  width: 200px;
 }
 
 .steps{
   background-color: lightsteelblue;
-  height: 150px;
+  height: 160px;
+  width: 200px
+}
+
+.logo{
+  margin-left: 250px;
+}
+
+img{
+  height: 500px;
+  width: 500px;
 }

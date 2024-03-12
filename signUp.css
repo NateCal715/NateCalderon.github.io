@@ -85,6 +85,7 @@
     background-color: lightskyblue;
     text-align: center;
     width: 350px;
+    height: 220px;
     margin: auto;
   }    
 
@@ -102,4 +103,10 @@
     border-radius: 8px;
     pointer-events: auto;
   }
+
+  img{
+    height: 178px;
+    width: 178px;
+  }
+
  
