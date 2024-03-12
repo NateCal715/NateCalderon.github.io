@@ -23,16 +23,23 @@ h1 {
     background-color: lightskyblue;
     color: white;
 }
+
 .sleep-log h2 {
     color: lightskyblue;
     text-align: center;
 }
+
 #sleepStats p {
     text-align: center;
     color: lightskyblue;
 }
+
 footer .footer a {
     display: block;
     text-align: center;
     color: blue;
+}
+
+label{
+    color: lightskyblue;
 }

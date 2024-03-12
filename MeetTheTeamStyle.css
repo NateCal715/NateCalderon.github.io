@@ -9,6 +9,13 @@ h2{
   color: lightskyblue;
 }
 
+h3{
+  text-align: center;
+  color: lightskyblue;
+}
+h4{
+  color: lightskyblue;
+}
 p{
   text-align: center;
   color: lightskyblue;
@@ -39,4 +46,37 @@ p{
   background-color: lightskyblue;
   color: blue;
 }
+
+.flex-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.images{
+  text-align: center;
+  margin-top: 110px;
+}
+
+.names{
+  display: flex;
+}
+
+.name1{
+  margin-left: 250px;
+  margin-right: 120px;
+}
+
+.name2{
+  margin-right: 120px;
+}
+
+.name3{
+  margin-right: 90px;
+}
+
+.name4{
+  margin-right: 100px;
+}
+
 
