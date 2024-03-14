@@ -1,4 +1,7 @@
-html {background-color: #003366}
+html {
+  background-color: #003366
+}
+
 h1 {
   text-align: center;
   color: lightskyblue;
@@ -13,14 +16,17 @@ h3{
   text-align: center;
   color: lightskyblue;
 }
+
 h4{
   color: lightskyblue;
 }
+
 p{
   text-align: center;
   color: lightskyblue;
   font-size: large;
 }
+
 .topnav {
   background-color: #b6f0f3;
   overflow: hidden;

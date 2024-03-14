@@ -1,20 +1,27 @@
  /* set page color */
-html {background-color: #003366}
+html {
+  background-color: #003366
+}
+
 h1 {
   text-align: center;
   color: lightskyblue;
  }
+
 h2{
   color: blue;
 }
+
 h4{
   color: white;
 }
+
 p{
   text-align: center;
   color: lightblue;
   font-size: large;
 }
+
 .topnav {
   background-color: #b6f0f3;
   overflow: hidden;
@@ -41,9 +48,11 @@ p{
   background-color: lightskyblue;
   color: blue;
 }
+
 .container{
   text-align: center;
 }
+
 .button {
   display: inline-block;
   border-radius: 4px;
