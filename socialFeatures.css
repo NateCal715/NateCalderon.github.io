@@ -1,20 +1,23 @@
-html {background-color: #003366}
+html {
+  background-color: #003366;
+}
+
 h1 {
   text-align: center;
   color: lightskyblue;
- }
+}
 
-p{
+p {
   text-align: center;
   color: lightskyblue;
   font-size: large;
 }
+
 .topnav {
   background-color: #b6f0f3;
   overflow: hidden;
 }
 
-/* Style the links inside the navigation bar */
 .topnav a {
   float: left;
   color: blue;
@@ -24,14 +27,72 @@ p{
   font-size: 17px;
 }
 
-/* Change the color of links on hover */
 .topnav a:hover {
   background-color: lightsteelblue;
   color: white;
 }
 
-/* Add a color to the active/current link */
 .topnav a.active {
   background-color: lightskyblue;
   color: blue;
+}
+
+
+#forum, #challenges, #achievements {
+  margin: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #007399; 
+  color: lightskyblue;
+}
+
+#post-forum input[type="text"], #post-forum textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #b6f0f3;
+  background-color: #005480; 
+  color: lightskyblue;
+}
+
+#post-forum button {
+  background-color: #b6f0f3;
+  color: #003366;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#post-forum button:hover {
+  background-color: lightsteelblue;
+  color: white;
+}
+
+.post, .replyForm {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #005480;
+  color: lightskyblue;
+  border-radius: 5px;
+}
+
+.replyInput {
+  width: 80%;
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: 1px solid #b6f0f3;
+  background-color: #005480; 
+  color: lightskyblue;
+}
+
+.reply {
+  margin-top: 10px;
+  padding: 5px;
+  background-color: #007399; 
+  color: lightskyblue;
+  border-radius: 5px;
 }
