@@ -9,18 +9,105 @@
 
     <body>
         <section id="header">
-            <h1>Achieve and Share!</h1>
-            <h1>Compete in challenges, share your achievements, and attain your fitness goals!</h2>
-            <div class="topnav">
+            <h1>Achieve, Share and connect!</h1>
+            <nav class="topnav">
                 <a class="active" href="index.html">Home</a>
                 <a href="sleepTracker.html">Sleep Tracker</a>
                 <a href="workoutPlanner.html">Workout Planner</a>
                 <a href="NutritionDataBase.html">Meal Planner</a>
+                <a href="BMItracker.html">BMI Tracker</a>
                 <a href="MeetTheTeam.html">Meet The Team!</a>
-                <a href="login.html">Log In</a>
-                <a href="signUp.html">Sign Up</a>
-            </div>
+            </nav>
+            <h1>Compete in challenges, share your achievements, and attain your fitness goals!</h2>
         </section>
+
+        <section id = "challenges">
+            <h2>Current Challenges</h2>
+            <div class = "challenge-list">
+                <div class = "challenge-item">
+
+
+                </div>
+            </div>
+
+        </section>
+
+        <section id = "achievements">
+            <h2>Your Achievemnts</h2>
+            <div class = "achievements-container">
+                <div class = "achievement-item"></div>
+
+                
+                
+            </div>
+            
+
+        </section>
+
+        <section id="forum">
+            <h2>Simple Forum</h2>
+            <div id="post-forum">
+                <input type = "text" id = "post-title" placeholder = "Title">
+                <textarea id = "post-content" placeholder = "Post something..."></textarea>
+                <button onclick = "createPost()">Post</button>
+            </div>
+            <div id="posts-container"></div>
+        </section>
+
+        <footer>
+            <div>
+
+            </div>
+        </footer>
+
+        <script>
+            function createPost() {
+                const title = document.getElementById('post-title').value;
+                const content = document.getElementById('post-content').value;
+
+                //clear inputs
+                document.getElementById('post-title').value = '';
+                document.getElementById('post-content').value = '';
+
+                //create post elements
+                const postElement = document.createElement('div');
+                postElement.classList.add('post');
+                postElement.innerHTML = `
+                    <h3>${title}</h3>
+                    <p>${content}</p>
+                    <div class="replies"></div>
+                    <button onclick="showReplyForm(this.nextElementSibling)">Reply</button>
+                    <div class="replyForm" style="display:none;">
+                        <input type="text" class="replyInput" placeholder="Write a reply...">
+                        <button onclick="addReply(this)">Post Reply</button>
+                    </div>
+                `;
+                
+                document.getElementById('posts-container').appendChild(postElement);
+            }
+
+            function showReplyForm(replyForm) {
+                replyForm.style.display = 'block'; //show the reply form
+            }
+
+            function addReply(button) {
+                const replyInput = button.previousElementSibling;
+                const replyContent = replyInput.value;
+                replyInput.value = '';
+
+                if (!replyContent) return;
+
+                const replyElement = document.createElement('div');
+                replyElement.textContent = replyContent;
+                replyElement.classList.add('reply');
+
+                const repliesContainer = button.parentElement.previousElementSibling;
+                repliesContainer.appendChild(replyElement);
+
+                button.parentElement.style.display = 'none'
+            }
+
+        </script>
 
     
     </body>
