@@ -68,15 +68,16 @@
         <input type="radio" name="workout" id=loseWeight value="">
         <label for="buildEdurance">Build Endurance</label>
         <input type="radio" name="workout" id=buildEndurance value="">
-        <br>
+        <br><br>
         <button type="button" onClick="getRadioValue()">Submit</button>
         <br>
         <img src="https://cdn3.iconfinder.com/data/icons/sport-40/1772/Vinyl_Dumbbells_Aerobics_Fitness_Exercise-512.png" alt="Weights">
       </form>
     </div>
     <div class="messages">
-      <h2 id="BMIvalue"></h2>
       <br>
+      <h2 id="BMIvalue"></h2>
+      <br><br>
       <h2 id="stepValue"></h2>
     </div>
     <div id = buildMuscleVideos>
@@ -105,25 +106,51 @@
       function BMIcalculatorImperial (form) {
         let feet = form.feetInput.value;
         let inches = form.inchesInput.value;
-        let height = feet * 12 + inches / 10;
         let pounds = form.poundsInput.value;
-        let BMI = (pounds) / (height ** 2) * 703;
-        BMI = BMI.toFixed(1);
-        document.getElementById("BMIvalue").innerHTML = `Your BMI is ${BMI}!`;
+        let displayMessage = "Please fill out the entire form to calculate your BMI.";
+
+        let invalidInput = isEmpty(feet) || isEmpty(inches) || isEmpty(pounds);
+
+        if (!invalidInput) {
+          let height = feet * 12 + inches / 10;
+          let BMI = (pounds) / (height ** 2) * 703; 
+          BMI = BMI.toFixed(1);
+
+          displayMessage = getBMIDisplayMessage(BMI);
+        }
+
+        document.getElementById("BMIvalue").innerHTML = displayMessage;
         localStorage.setItem("BMInumber", "BMI");
       }
       function BMIcalculatorMetric (form) {
         let centimeters = form.centimeterInput.value;
-        let meters = centimeters / 100;
         let kilograms = form.kilogramInput.value;
-        let BMI = (kilograms) / (meters ** 2);
-        BMI = BMI.toFixed(1);
-        document.getElementById("BMIvalue").innerHTML = `Your BMI is ${BMI}`;
+        let displayMessage = "Please fill out the entire form to calculate your BMI";
+
+        let invalidInput = isEmpty(centimeters) || isEmpty(kilograms);
+
+        if (!invalidInput) {
+          let meters = centimeters / 100;
+          let BMI = (kilograms) / (meters ** 2);
+          BMI = BMI.toFixed(1);
+
+          displayMessage = getBMIDisplayMessage(BMI);
+        }
+        
+        document.getElementById("BMIvalue").innerHTML = displayMessage;
         localStorage.setItem("BMInumber", "BMI");
+      }
+      function getBMIDisplayMessage(input) {
+        return isEmpty(input) ? "Please fill out the form to calculate your BMI" : `Your BMI is ${input}!`;
       }
       function stepCounter (form) {
         let steps = form.stepInput.value;
-        document.getElementById("stepValue").innerHTML = `You walked ${steps} steps!`;
+        let displayMessage = "You have not walked any steps today";
+
+        if (!isEmpty(steps)) {
+          displayMessage = `You walked ${steps} steps!`;
+        }
+        document.getElementById("stepValue").innerHTML = displayMessage;
       }
       function showImperial(){
         BMIformImperial.style.display = "block";
@@ -181,6 +208,9 @@
         buildEnduranceVideos.style.display = "block";
         hideBuildMuscle();
         hideLoseWeight();
+      }
+      function isEmpty(input){
+        return input === "" || input === undefined || input === NaN || input === "0" ? true : false;
       }
     </script>
   </body>

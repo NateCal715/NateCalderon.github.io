@@ -48,3 +48,11 @@ footer .footer a {
 label{
     color: lightskyblue;
 }
+
+.calculate {
+    padding: 5px;
+    background-color: #b6f0f3;
+    color: blue;
+    margin-left: 50%;
+    border-radius: 5px;
+}
