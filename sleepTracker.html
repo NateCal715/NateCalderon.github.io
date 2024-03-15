@@ -24,11 +24,11 @@
   <main>
     <section class="sleep-log">
       <h2>Log Daily Sleep Hours</h2>
-      <label for="monthSelector">Select Month:</label>
-      <select id="monthSelector" onchange="createDayInputs(this.value, new Date().getFullYear())">
+      <label class= "header" for="monthSelector">Select Month:</label>
+      <select class = "month header" id="monthSelector" onchange="createDayInputs(this.value, new Date().getFullYear())">
         <!-- Options added by JavaScript -->
       </select>
-      <div id="dailySleepInputs">
+      <div id="dailySleepInputs" class="dailySleepInputs">
         <!-- Daily inputs added by JavaScript -->
       </div>
       <button class="calculate" type="button" onclick="calculateSleep()">Calculate</button>
@@ -78,6 +78,7 @@
       input.type = 'number';
       input.name = `day${day}`;
       input.placeholder = `Day ${day} hours`;
+      input.className = 'sleep-hours-input';
 
       // Repopulate saved data if available
       if (monthlySleepLogs[yearMonthKey] && monthlySleepLogs[yearMonthKey][day]) {

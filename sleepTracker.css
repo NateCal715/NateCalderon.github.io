@@ -51,8 +51,28 @@ label{
 
 .calculate {
     padding: 5px;
-    background-color: #b6f0f3;
+    background-color: lightskyblue;
     color: blue;
-    margin-left: 50%;
+    margin-left: 47%;
     border-radius: 5px;
+}
+.month{
+    color: blue;
+    background-color: lightskyblue;
+}
+
+.sleep-hours-input {
+    background-color: lightskyblue;
+}
+
+.sleep-hours-input::placeholder {
+    color: blue;
+}
+
+.header {
+    margin-left: 47%;
+}
+
+.dailySleepInputs {
+    margin-top: 20px;
 }
