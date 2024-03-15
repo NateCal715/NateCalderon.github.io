@@ -16,11 +16,12 @@
       <a href="signUp.html">Sign Up</a>
     </div>
     <div class="showMessage">
+      <br>
       <h2>Click show if you would like to show the BMI information</h2> 
       <button class="show" onClick="showBMI()">Show</button>
       <button class="button" onClick="showImperial()">Imperial</button>
       <button class ="button" onClick="showMetric()">Metric</button>
-      <br>
+      <br><br>
     </div>
     <div class="flex-container">
       <form name="BMIformImperial" action="" method="GET">
@@ -69,7 +70,7 @@
         <label for="buildEdurance">Build Endurance</label>
         <input type="radio" name="workout" id=buildEndurance value="">
         <br><br>
-        <button type="button" onClick="getRadioValue()">Submit</button>
+        <button class="submit" type="button" onClick="getRadioValue()">Submit</button>
         <br>
         <img src="https://cdn3.iconfinder.com/data/icons/sport-40/1772/Vinyl_Dumbbells_Aerobics_Fitness_Exercise-512.png" alt="Weights">
       </form>
@@ -106,21 +107,24 @@
       function BMIcalculatorImperial (form) {
         let feet = form.feetInput.value;
         let inches = form.inchesInput.value;
-        let pounds = form.poundsInput.value;
+        let pounds =form.poundsInput.value;
         let displayMessage = "Please fill out the entire form to calculate your BMI.";
 
         let invalidInput = isEmpty(feet) || isEmpty(inches) || isEmpty(pounds);
 
         if (!invalidInput) {
-          let height = feet * 12 + inches / 10;
+          feet = Number(feet);
+          inches = Number(inches);
+          pounds = Number(pounds);
+          let height = feet * 12 + inches;
+          console.log(typeof(height))
           let BMI = (pounds) / (height ** 2) * 703; 
           BMI = BMI.toFixed(1);
 
-          displayMessage = getBMIDisplayMessage(BMI);
+          displayMessage = `Your BMI is ${BMI}!`;
         }
 
         document.getElementById("BMIvalue").innerHTML = displayMessage;
-        localStorage.setItem("BMInumber", "BMI");
       }
       function BMIcalculatorMetric (form) {
         let centimeters = form.centimeterInput.value;
@@ -130,18 +134,16 @@
         let invalidInput = isEmpty(centimeters) || isEmpty(kilograms);
 
         if (!invalidInput) {
+          centimeters = Number(centimeters);
+          kilograms = Number(kilograms);
           let meters = centimeters / 100;
           let BMI = (kilograms) / (meters ** 2);
           BMI = BMI.toFixed(1);
 
-          displayMessage = getBMIDisplayMessage(BMI);
+          displayMessage =  `Your BMI is ${BMI}!`;
         }
         
         document.getElementById("BMIvalue").innerHTML = displayMessage;
-        localStorage.setItem("BMInumber", "BMI");
-      }
-      function getBMIDisplayMessage(input) {
-        return isEmpty(input) ? "Please fill out the form to calculate your BMI" : `Your BMI is ${input}!`;
       }
       function stepCounter (form) {
         let steps = form.stepInput.value;

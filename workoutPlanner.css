@@ -84,7 +84,14 @@ html{
   input[type=button] {
     background-color: #003366;
     color: #b6f0f3;
-    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 8px;
+    pointer-events: auto;
+  }
+
+  .submit {
+    background-color: #003366;
+    color: #b6f0f3;
     padding: 10px 15px;
     border-radius: 8px;
     pointer-events: auto;
@@ -93,7 +100,7 @@ html{
   .buttonContainer{
     text-align: left;
   }
-  
+
   .button{
     background-color: #b6f0f3;
     color: blue;
