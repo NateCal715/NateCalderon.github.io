@@ -80,3 +80,17 @@ label{
 .dailySleepInputs {
     margin-top: 20px;
 }
+
+/* Added styles for sleep recommendations */
+.sleep-recommendations h3,
+.sleep-recommendations ul,
+.sleep-recommendations ul li {
+    text-align: center;
+    color: lightskyblue;
+}
+
+/* Updated styles to remove bullet points from sleep recommendations */
+.sleep-recommendations ul {
+    list-style-type: none;
+    padding: 0;
+}
