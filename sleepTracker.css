@@ -65,6 +65,10 @@ label{
     background-color: lightskyblue;
 }
 
+.dailySleepInputs{
+    margin-left: 60px;
+}
+
 .sleep-hours-input::placeholder {
     color: blue;
 }
