@@ -64,25 +64,45 @@ p{
   margin-top: 110px;
 }
 
+.image1{
+  border: 5px solid lightskyblue;
+}
+
+.image2{
+  border: 5px solid lightskyblue;
+}
+
+.image3{
+  border: 5px solid lightskyblue;
+}
+
+.image4{
+  border: 5px solid lightskyblue;
+}
+
+.image5{
+  border: 5px solid lightskyblue;
+}
+
 .names{
   display: flex;
 }
 
 .name1{
   margin-left: 250px;
-  margin-right: 120px;
+  margin-right: 110px;
 }
 
 .name2{
-  margin-right: 120px;
+  margin-right: 125px;
 }
 
 .name3{
-  margin-right: 90px;
+  margin-right: 110px;
 }
 
 .name4{
-  margin-right: 100px;
+  margin-right: 110px;
 }
 
 
