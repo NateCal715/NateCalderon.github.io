@@ -80,9 +80,9 @@
      <input type="text" name="appetizerInput" value=""><br>
      <label for="beverage">Beverage</label>
      <input type="text" name="beverageInput" value=""><br>
-     <input type="button" value="Submit" onClick="">
+     <input type="button" value="Submit" onClick="breakfastIntake(this.form)">
    </form>
-      <br>
+     
    <form name="mealformLunch" action="" method="GET">
      <label for="entree">Entree</label>
      <input type="text" name="entreeInput" value=""><br>
@@ -90,9 +90,9 @@
      <input type="text" name="appetizerInput" value=""><br>
      <label for="beverage">Beverage</label>
      <input type="text" name="beverageInput" value=""><br>
-     <input type="button" value="Submit" onClick="">
+     <input type="button" value="Submit" onClick="lunchIntake(this.form)">
    </form>
-     <br>
+ 
    <form name="mealformDinner" action="" method="GET">
      <label for="entree">Entree</label>
      <input type="text" name="entreeInput" value=""><br>
@@ -100,11 +100,11 @@
      <input type="text" name="appetizerInput" value=""><br>
      <label for="beverage">Beverage</label>
      <input type="text" name="beverageInput" value=""><br>
-     <input type="button" value="Submit" onClick="">
+     <input type="button" value="Submit" onClick="dinnerIntake(this.form)">
    </form>
-     <!--<div class="messages">
-       <h1 id="mealValue"></h1>
-     </div>-->
+     <div class="messages">
+       <h1 id="breakfastValue"></h1>
+     </div>
       <form name = "waterForm" action="" method="GET">
         <h3>Water Intake</h3>
         <label for="water">Water by fl oz</label>
@@ -141,7 +141,26 @@
       mealformDinner.style.display = "block";
       heading.style.display = "block";
           }
-           function waterIntake (form) {
+        
+          function breakfastIntake (form) {
+            let entree = form.entreeInput.value;
+            let appetizer = form.appetizerInput.value;
+            let beverage = form.beverageInput.value;
+            let displayMessage = "You have not recorded anything consumed on this day";
+
+            if (!isEmpty(entree) {
+              displayMessage = 'You recorded ${entree} eaten during breakfast on this day';
+            }
+             if (!isEmpty(appetizer) {
+              displayMessage = 'You recorded ${appetizer} eaten during breakfast on this day';
+            }
+             if (!isEmpty(beverage) {
+              displayMessage = 'You recorded ${beverage} drank during breakfast on this day';
+            }
+          document.getElementbyId("breakfastValue").innerHTML = displayMessage;
+          }
+        
+          function waterIntake (form) {
         let water = form.waterInput.value;
         let displayMessage = "You have not drank any water today";
 
