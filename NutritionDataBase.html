@@ -99,10 +99,10 @@
    </form>
      
       
-      <form name = "waterIntake" action="" method="GET">
+      <form name = "waterForm" action="" method="GET">
         <h3>Water Intake</h3>
         <label for="water">Water</label>
-        <input type="text" name="waterIntake" value="">
+        <input type="text" name="waterInput" value="">
         <input type="button" value="Log" onClick=waterIntake(this.form)>
       </form> 
       <div class="messages">
@@ -137,7 +137,7 @@
       heading.style.display = "block";
           }
            function waterIntake (form) {
-        let water = form.waterIntake.value;
+        let water = form.waterInput.value;
         let displayMessage = "You have not drank any water today";
 
         if (!isEmpty(water)) {
