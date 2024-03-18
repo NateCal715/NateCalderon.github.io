@@ -15,31 +15,113 @@
       <a href="login.html">Log In</a>
       <a href="signUp.html">Sign Up</a>
     </div>
-    <h2>Let's start with your special needs! Please click on any dietary restrictions that may pertain to you.</h2>
+   </div>
+      <h2>Let's start with your personal needs! Please click on any dietary restrictions that may pertain to you.</h2>
     <p1>
      <br>
       <form name = "dietaryRestriction"> 
-        <input type="radio" id="Lactose Intolerance" name="restrictions" value="Condition">
+        <li>
+        <input type="checkbox" id="Lactose Intolerance" name="restrictions" value="Condition">
         <label for="Lactose Intolerance">Lactose Intolerance</label>
-        <input type="radio" id="Gluten-Free" name="restrictions" value="Condition">
+        </li>
+        <li>
+        <input type="checkbox" id="Gluten-Free" name="restrictions" value="Condition">
         <label for="Gluten-Free">Gluten-Free</label>
-        <input type="radio" id="Vegetarianism" name="restrictions" value="Lifestyle">
-        <label for="Vegetarianism">Vegetarianism</label>
-        <input type="radio" id="Veganism" name="restrictions" value="Lifestyle">
-        <label for="Veganism">Dairy</label>
-        <input type="radio" id="Kosher" name="restrictions" value="Lifestyle">
+      </li>
+      <li>
+        <input type="checkbox" id="Vegetarian" name="restrictions" value="Lifestyle">
+        <label for="Vegetarian">Vegetarian</label>
+      </li>
+      <li>
+        <input type="checkbox" id="Vegan" name="restrictions" value="Lifestyle">
+        <label for="Vegan">Vegan</label>
+      </li>
+      <li>
+        <input type="checkbox" id="Kosher" name="restrictions" value="Lifestyle">
         <label for="Kosher">Kosher</label>
-        <input type="radio" id="Keto" name="restrictions" value="Lifestyle">
+      </li>
+      <li>
+        <input type="checkbox" id="Halal" name="restrictions" value="Lifestyle">
+        <label for="Halal">Halal</label>
+      </li>
+      <li>
+        <input type="checkbox" id="Keto" name="restrictions" value="Lifestyle">
         <label for="Keto">Keto</label>
-        <input type="radio" id="Diabetes" name="restrictions" value="Condition">
+      </li>
+      <li>
+        <input type="checkbox" id="Diabetes" name="restrictions" value="Condition">
         <label for="Diabetes">Diabetes</label>
-        <input type="radio" id="Dairy-Free" name="restrictions" value="Lifestyle">
+      </li>
+      <li>
+        <input type="checkbox" id="Dairy-Free" name="restrictions" value="Lifestyle">
         <label for="Dairy-Free">Dairy-Free</label>
-        <input type="radio" id="Low-Card" name="restrictions" value="Condition">
+      </li>
+      <li>
+        <input type="checkbox" id="Low-Card" name="restrictions" value="Condition">
         <label for="Low-Carb">Low-Carb</label>
-        <input type="radio" id="Food-Allergies" name="restrictions" value="Condition">
-        <label for="Food Allergies">Food Allergies</label><br>
-      </form>
+      </li>
+      <div class="allergySelection">
+         <!-- This code isn't operational yet, i can't get the options to appear in the dropdown
+              once this is operational, remove the text that says "Select Applicable Allergies"
+          <div class="selectBox" onclick="showCheckboxes()">
+          <select>
+            <option>Select Applicable Allergies</option>
+          </select>
+          <div class="overSelect"></div>
+        </div> --->
+        <label for="allergies">Select Applicable Allergies</label>
+        <div id="allergyBoxes">
+          <label for="Dairy">
+            <input type="checkbox" id="Dairy" />
+            Dairy
+          </label>
+          <label for="Eggs">
+            <input type="checkbox" id="Eggs" />
+            Eggs
+          </label>
+          <label for="Fish">
+            <input type="checkbox" id="Fish" />
+            Fish
+          </label>
+          <label for="Shellfish">
+            <input type="checkbox" id="Shellfish" />
+            Shellfish
+          </label>
+          <label for="Tree Nuts">
+            <input type="checkbox" id="Tree Nuts" />
+            Tree Nuts
+          </label>
+          <label for="Peanuts">
+            <input type="checkbox" id="Peanuts" />
+            Peanuts
+          </label>
+          <label for="Wheat">
+            <input type="checkbox" id="Wheat" />
+            Wheat
+          </label>
+          <label for="Soybeans">
+            <input type="checkbox" id="Soybeans" />
+            Soybeans
+          </label>
+          <label for="Sesame">
+            <input type="checkbox" id="Sesame" />
+            Sesame
+          </label>
+        </div>
+      </div>
+    </form>
+    <script>
+      function showCheckboxes() {
+        let checkboxes = document.getElementById("checkBoxes");
+        if (show) {
+            checkboxes.style.display = "block";
+            show = false;
+        } else {
+            checkboxes.style.display = "none";
+            show = true;
+        }
+      }
+    </script>
       <!-- Want to make it so when Food Allergies is selected, a text box appears and prompts users to input specific Food(s) -->
       <!-- <div id="allergyBox" style="display: none;">
       <label for="allergies">Enter Specific Food Allergies:</label><br>
