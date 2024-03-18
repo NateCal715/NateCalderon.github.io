@@ -106,7 +106,6 @@
         <input type="button" value="Log" onClick="waterIntake(this.form)">
       </form> 
       <div class="messages">
-      <br>
       <h2 id="waterValue"></h2>
     </div>
       
@@ -145,6 +144,8 @@
         }
         document.getElementById("waterValue").innerHTML = displayMessage;
       }
+        function isEmpty(input){
+        return input === "" || input === undefined || input === NaN || input === "0" ? true : false;
         </script>
     
 
