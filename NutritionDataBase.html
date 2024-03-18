@@ -15,28 +15,28 @@
       <a href="login.html">Log In</a>
       <a href="signUp.html">Sign Up</a>
     </div>
-    <h3>Let's start with your special needs! Please click on any dietary restrictions that may pertain to you.</h3>
+    <h2>Let's start with your special needs! Please click on any dietary restrictions that may pertain to you.</h2>
     <p1>
      <br>
       <form name = "dietaryRestriction"> 
         <input type="radio" id="Lactose Intolerance" name="restrictions" value="Condition">
-        <label for="Lactose Intolerance">Lactose Intolerance</label><br>
+        <label for="Lactose Intolerance">Lactose Intolerance</label>
         <input type="radio" id="Gluten-Free" name="restrictions" value="Condition">
-        <label for="Gluten-Free">Gluten-Free</label><br>
+        <label for="Gluten-Free">Gluten-Free</label>
         <input type="radio" id="Vegetarianism" name="restrictions" value="Lifestyle">
-        <label for="Vegetarianism">Vegetarianism</label><br>
+        <label for="Vegetarianism">Vegetarianism</label>
         <input type="radio" id="Veganism" name="restrictions" value="Lifestyle">
-        <label for="Veganism">Dairy</label><br>
+        <label for="Veganism">Dairy</label>
         <input type="radio" id="Kosher" name="restrictions" value="Lifestyle">
-        <label for="Kosher">Kosher</label><br>
+        <label for="Kosher">Kosher</label>
         <input type="radio" id="Keto" name="restrictions" value="Lifestyle">
-        <label for="Keto">Keto</label><br>
+        <label for="Keto">Keto</label>
         <input type="radio" id="Diabetes" name="restrictions" value="Condition">
-        <label for="Diabetes">Diabetes</label><br>
+        <label for="Diabetes">Diabetes</label>
         <input type="radio" id="Dairy-Free" name="restrictions" value="Lifestyle">
-        <label for="Dairy-Free">Dairy-Free</label><br>
+        <label for="Dairy-Free">Dairy-Free</label>
         <input type="radio" id="Low-Card" name="restrictions" value="Condition">
-        <label for="Low-Carb">Low-Carb</label><br>
+        <label for="Low-Carb">Low-Carb</label>
         <input type="radio" id="Food-Allergies" name="restrictions" value="Condition">
         <label for="Food Allergies">Food Allergies</label><br>
       </form>
@@ -62,7 +62,7 @@
     </p1>
     <section>
       <p2>
-      <h2>What did you eat today?</h2>
+      <h3>What did you eat today?</h3>
      <div class="breakfastButton">
       <button class="Breakfast" onClick="showBreakfast()">Breakfast</button>
      </div>
@@ -97,7 +97,20 @@
      <label for="beverage">Beverage</label>
      <input type="text" name="beverageInput" value=""><br>
    </form>
-        <script>
+     
+      <br>
+      
+      <form name = "waterIntake" action="" method="GET">
+        <h3>Water Intake</h3>
+        <label for="water">Water</label>
+        <input type="text" name="waterIntake" value="">
+        <input type="button" value="Log" onClick=waterIntake(this.form)>
+      </form>
+<br>  
+      <div class="messages">
+      <br>
+      <h2 id="waterValue"></h2>
+    </div>
           hideMeals();
           function hideMeals(){
       mealformBreakfast.style.display = "none";
@@ -123,6 +136,15 @@
       mealformDinner.style.display = "block";
       heading.style.display = "block";
           }
+           function waterIntake (form) {
+        let water = form.waterIntake.value;
+        let displayMessage = "You have not drank any water today";
+
+        if (!isEmpty(water)) {
+          displayMessage = `You drank ${water} L of water today!`;
+        }
+        document.getElementById("waterValue").innerHTML = displayMessage;
+      }
         </script>
     
 
@@ -143,12 +165,7 @@
       <label for="Dairy">Dairy</label><br>
       <input type="radio" id="Protein" name="food groups" value="Protein">
       <label for="Protein">Protein</label><br> 
-      </form> -->
-<br>
-      <h3>Water Intake</h3>
-      <form name = "waterIntake">
-        <label for="Water">Water</label>
-        <input type="text" name="waterIntake" value="">
+      </form> -->    
        
     </section>
 <section2>
@@ -166,3 +183,4 @@
 <!-- I think we should make waterIntake and MealPlanner the same page and rename it to the Nutritional Database
         I think it would streamline the step-by-step plan we're trying to implement and make the website much more concise and easier to nav-->
 <!--contains calorieTracker and waterIntake-->
+
