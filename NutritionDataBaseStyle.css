@@ -121,11 +121,11 @@ input[type=radio] {
   color: white;
 }
 
-.button-container {
+/*.button-container {
   display: flex;
   justify-content: space-between;
 }
- 
+ */
 .messages{
     text-align: center;
   }
