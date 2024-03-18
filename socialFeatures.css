@@ -2,20 +2,25 @@ html {
   background-color: #003366;
 }
 
-h1 {
-  text-align: center;
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+h1, h2, h3 {
   color: lightskyblue;
 }
 
-p {
+h1 {
   text-align: center;
-  color: lightskyblue;
-  font-size: large;
+  margin-bottom: 40px; 
 }
 
 .topnav {
   background-color: #b6f0f3;
   overflow: hidden;
+  padding: 0 20px; 
 }
 
 .topnav a {
@@ -37,62 +42,53 @@ p {
   color: blue;
 }
 
+.section {
+  margin-bottom: 40px; 
+}
 
 #forum, #challenges, #achievements {
-  margin: 20px;
+  margin: 20px 0; 
   padding: 20px;
   border-radius: 5px;
   background-color: #007399; 
   color: lightskyblue;
 }
 
-#post-forum input[type="text"], #post-forum textarea {
-  width: 100%;
+#post-forum input[type="text"], #post-forum textarea, .replyInput {
+  width: 95%;
   padding: 10px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin: 10px 0; 
   border-radius: 5px;
   border: 1px solid #b6f0f3;
-  background-color: #005480; 
+  background-color: #004182; 
   color: lightskyblue;
 }
 
-#post-forum button {
+#post-forum button, .replyForm button {
   background-color: #b6f0f3;
   color: #003366;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  margin-top: 10px; 
 }
 
-#post-forum button:hover {
+#post-forum button:hover, .replyForm button:hover {
   background-color: lightsteelblue;
   color: white;
 }
 
-.post, .replyForm {
+.post, .replyForm, .reply {
   margin-top: 20px;
-  padding: 10px;
+  padding: 15px; 
   background-color: #005480;
   color: lightskyblue;
   border-radius: 5px;
 }
 
-.replyInput {
-  width: 80%;
-  padding: 10px;
-  margin-right: 10px;
-  border-radius: 5px;
-  border: 1px solid #b6f0f3;
-  background-color: #005480; 
-  color: lightskyblue;
-}
-
 .reply {
-  margin-top: 10px;
-  padding: 5px;
   background-color: #007399; 
-  color: lightskyblue;
-  border-radius: 5px;
+  margin-left: 30px;
+  align-items: left;
 }
