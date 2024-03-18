@@ -45,12 +45,12 @@ h4{
   color: blue;
 }
 
-.flex-container {
+/*.flex-container {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
   }
- 
+ */
 
 /*form {
     background-color: lightskyblue;
