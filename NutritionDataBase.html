@@ -102,9 +102,6 @@
      <input type="text" name="beverageInput" value=""><br>
      <input type="button" value="Submit" onClick="dinnerIntake(this.form)">
    </form>
-     <div class="messages">
-       <h1 id="breakfastValue"></h1>
-     </div>
       <form name = "waterForm" action="" method="GET">
         <h3>Water Intake</h3>
         <label for="water">Water by fl oz</label>
@@ -148,15 +145,15 @@
             let beverage = form.beverageInput.value;
             let displayMessage = "You have not recorded anything consumed on this day";
 
-            if (!isEmpty(entree) {
+            if (!isEmpty(entree)) {
               displayMessage = 'You recorded ${entree} eaten during breakfast on this day';
             }
-             if (!isEmpty(appetizer) {
+            if (!isEmpty(appetizer)) {
               displayMessage = 'You recorded ${appetizer} eaten during breakfast on this day';
             }
-             if (!isEmpty(beverage) {
+            if (!isEmpty(beverage)) {
               displayMessage = 'You recorded ${beverage} drank during breakfast on this day';
-            }
+            } 
           document.getElementbyId("breakfastValue").innerHTML = displayMessage;
           }
         
@@ -165,7 +162,7 @@
         let displayMessage = "You have not drank any water today";
 
         if (!isEmpty(water)) {
-          displayMessage = `You drank ${water} L of water today!`;
+          displayMessage = `You drank ${water} fluid ounces of water today!`;
         }
         document.getElementById("waterValue").innerHTML = displayMessage;
       }
