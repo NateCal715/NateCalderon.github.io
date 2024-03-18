@@ -65,3 +65,10 @@ input[type=radio] {
   display: flex;
   justify-content: space-between;
 }
+ .showMessage{
+    text-align: center;
+  }
+.messages{
+    text-align: center;
+  }
+
