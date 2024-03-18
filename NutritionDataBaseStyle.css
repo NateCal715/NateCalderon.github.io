@@ -44,7 +44,13 @@ h4{
   background-color: lightskyblue;
   color: blue;
 }
-
+ form {
+    background-color: lightskyblue;
+    text-align: center;
+    width: 400px;
+    height: 300px;
+    margin: auto;
+  }    
 p1{
   text-align: center;
   color: lightskyblue;
@@ -65,9 +71,7 @@ input[type=radio] {
   display: flex;
   justify-content: space-between;
 }
- .showMessage{
-    text-align: center;
-  }
+ 
 .messages{
     text-align: center;
   }
