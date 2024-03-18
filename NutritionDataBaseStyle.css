@@ -44,13 +44,22 @@ h4{
   background-color: lightskyblue;
   color: blue;
 }
- form {
+
+.flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+ 
+
+form {
     background-color: lightskyblue;
     text-align: center;
     width: 400px;
     height: 300px;
     margin: auto;
   }    
+
 p1{
   text-align: center;
   color: lightskyblue;
