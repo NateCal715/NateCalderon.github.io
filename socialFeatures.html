@@ -62,6 +62,7 @@
         </footer>
 
         <script>
+            //function for creating post with title and content sections
             function createPost() {
                 const title = document.getElementById('post-title').value;
                 const content = document.getElementById('post-content').value;
@@ -79,7 +80,6 @@
                     <p>${content}</p>
                     <div class="replies"></div>
                     <button onclick="showReplyForm(this.nextElementSibling.nextElementSibling)">Reply</button>
-                    <!-- Updated Toggle Replies button with correct onclick handler -->
                     <button onclick="toggleReplies(this)">Toggle Replies</button>
                     <div class="replyForm" style="display:none;">
                         <input type="text" class="replyInput" placeholder="Write a reply...">
@@ -97,6 +97,7 @@
             }
 
             function addReply(button, parentId) {
+                //add ability to add reply same fashion as post function
                 const replyInput = button.previousElementSibling;
                 const replyContent = replyInput.value.trim();
                 replyInput.value = '';
@@ -131,7 +132,7 @@
                 button.parentElement.style.display = 'none'; //hide the reply form after posting the reply
             }
 
-
+            //toggle replies to either hide or show replies
             function toggleReplies(button) {
                 const repliesElement = button.parentElement.querySelector('.replies');
                 if (repliesElement.style.display === 'none') {
