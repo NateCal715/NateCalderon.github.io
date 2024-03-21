@@ -109,4 +109,7 @@
     width: 178px;
   }
 
+  .flex-container{
+    display: flex;
+  }
  

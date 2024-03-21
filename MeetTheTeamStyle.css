@@ -86,23 +86,7 @@ p{
 
 .names{
   display: flex;
+  margin-left: 17%;
+  gap: 0px 9.5%;
 }
-
-.name1{
-  margin-left: 250px;
-  margin-right: 110px;
-}
-
-.name2{
-  margin-right: 125px;
-}
-
-.name3{
-  margin-right: 110px;
-}
-
-.name4{
-  margin-right: 110px;
-}
-
 

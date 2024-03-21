@@ -123,10 +123,16 @@ html{
     justify-content: space-around;
   }
 
-  iframe{
-    margin-left: 110px;
-  }
+  /* iframe{ */
+    /* margin-left: 110px; */
+  /* } */
 
   .messages{
     text-align: center;
+  }
+
+  .workout-container{
+    display: flex;
+    padding: 140px;
+    gap: 10% 10%;
   }
