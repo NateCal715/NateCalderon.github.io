@@ -133,6 +133,5 @@ html{
 
   .workout-container{
     display: flex;
-    padding: 140px;
-    gap: 10% 10%;
+    padding: 10.5%
   }
