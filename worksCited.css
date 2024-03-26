@@ -47,4 +47,25 @@ h2{
     text-align: left;
     font-size: 20px;
   }
+
+  img{
+    height: 3%;
+    width: 3%;
+  }
+
+  .firstSource{
+    display: flex;
+  }
+  
+  .secondSource{
+    display: flex;
+  }
+  
+  .thirdSource{
+    display: flex;
+  }
+  
+  .fourthSource{
+    display: flex;
+  }
   
