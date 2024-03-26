@@ -1,15 +1,15 @@
-html {background-color: #003366}
+html {background-color: #1A1235}
 h1 {
     text-align: center;
-    color: lightskyblue;
+    color: #b6f0f3;
 }
 
 h3{
     text-align: center;
-    color: lightskyblue
+    color: #b6f0f3;
 }
 .topnav {
-    background-color: #b6f0f3;
+    background-color: #69E490;
     overflow: hidden;
 }
 .topnav a {
@@ -18,25 +18,31 @@ h3{
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 20px;
 }
+
 .topnav a:hover {
     background-color: lightsteelblue;
     color: white;
 }
+
 .topnav a.active {
     background-color: lightskyblue;
     color: white;
 }
 
+.align-right{
+    float: right;
+  }
+
 .sleep-log h2 {
-    color: lightskyblue;
+    color: #b6f0f3;
     text-align: center;
 }
 
 #sleepStats p {
     text-align: center;
-    color: lightskyblue;
+    color: #b6f0f3;
 }
 
 footer .footer a {
@@ -46,23 +52,23 @@ footer .footer a {
 }
 
 label{
-    color: lightskyblue;
+    color: #b6f0f3;
 }
 
 .calculate {
     padding: 5px;
-    background-color: lightskyblue;
+    background-color: #b6f0f3;
     color: blue;
     margin-left: 47%;
     border-radius: 5px;
 }
 .month{
     color: blue;
-    background-color: lightskyblue;
+    background-color: #b6f0f3;
 }
 
 .sleep-hours-input {
-    background-color: lightskyblue;
+    background-color: #b6f0f3;
 }
 
 .dailySleepInputs{
@@ -86,7 +92,7 @@ label{
 .sleep-recommendations ul,
 .sleep-recommendations ul li {
     text-align: center;
-    color: lightskyblue;
+    color: #b6f0f3;
 }
 
 /* Updated styles to remove bullet points from sleep recommendations */

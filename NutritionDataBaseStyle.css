@@ -1,25 +1,25 @@
 html{
-  background-color: #003366;
+  background-color: #1A1235;
 }
 h1{
   text-align: center;
-  color: lightskyblue;
+  color: #b6f0f3;
 }
 h2{
   text-align: center;
-  color: lightskyblue;
+  color: #b6f0f3;
 }
 h3{
   text-align: center;
-  color: lightskyblue;
+  color: #b6f0f3;
 }
 
 h4{
-  color: lightskyblue;
+  color: #b6f0f3;
 }
 
 .topnav {
-  background-color: #b6f0f3;
+  background-color: #69E490;
   overflow: hidden;
 }
 
@@ -30,7 +30,7 @@ h4{
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 20px;
 }
 
 /* Change the color of links on hover */
@@ -45,6 +45,10 @@ h4{
   color: blue;
 }
 
+.align-right{
+  float: right;
+}
+
 .container{
   text-align: center;
 }
@@ -52,7 +56,7 @@ h4{
 .button {
   display: inline-block;
   border-radius: 4px;
-  background-color: lightskyblue;
+  background-color: #b6f0f3;
   border: none;
   color: blue;
   text-align: center;
@@ -107,13 +111,13 @@ h4{
 
 p1{
   text-align: center;
-  color: lightskyblue;
+  color: #b6f0f3;
   font-size: large;
 }
 
 p2{
   text-align: center;
-  color: lightskyblue;
+  color: #b6f0f3;
 }
 
 input[type=radio] {
@@ -127,6 +131,7 @@ input[type=radio] {
 }
  */
 .messages{
-    text-align: center;
-  }
+  text-align: center;
+}
+
 

@@ -1,15 +1,15 @@
 html {
-  background-color: #003366;
+  background-color: #1A1235;
 }
 
-body {
-  font-family: Arial, sans-serif;
+body { 
+  /* font-family: Arial, sans-serif; */
   line-height: 1.6;
   padding: 20px;
 }
 
 h1, h2, h3 {
-  color: lightskyblue;
+  color: #b6f0f3;
 }
 
 h1 {
@@ -18,7 +18,7 @@ h1 {
 }
 
 .topnav {
-  background-color: #b6f0f3;
+  background-color: #69E490;
   overflow: hidden;
 }
 
@@ -28,7 +28,7 @@ h1 {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  /* font-size: 17px; */
+  font-size: 20px;
 }
 
 .topnav a:hover {
@@ -39,6 +39,10 @@ h1 {
 .topnav a.active {
   background-color: lightskyblue;
   color: blue;
+}
+
+.align-right{
+  float: right;
 }
 
 .section {

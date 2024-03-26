@@ -1,8 +1,8 @@
  /* set page color */
- html {background-color: #003366}
+ html {background-color: #1A1235;}
  h1 {
    text-align: center;
-   color: lightskyblue;
+   color: #b6f0f3;
    }
  h3{
     text-align: center;
@@ -14,7 +14,7 @@
    font-size: large;
  }
  .topnav {
-   background-color: #b6f0f3;
+   background-color: #69E490;
    overflow: hidden;
  }
  
@@ -25,7 +25,7 @@
    text-align: center;
    padding: 14px 16px;
    text-decoration: none;
-   font-size: 17px;
+   font-size: 20px;
  }
  
  /* Change the color of links on hover */
@@ -39,6 +39,11 @@
    background-color: lightskyblue;
    color: blue;
  }
+
+ .align-right{
+  float: right;
+}
+
  .container{
    text-align: center;
  }
@@ -82,7 +87,7 @@
    right: 0;
  }
  form {
-    background-color: lightskyblue;
+    background-color: #b6f0f3;
     text-align: center;
     width: 350px;
     height: 220px;
@@ -102,6 +107,10 @@
     padding: 10px 15px;
     border-radius: 8px;
     pointer-events: auto;
+  }
+
+  label{
+    color: blue;
   }
 
   img{
