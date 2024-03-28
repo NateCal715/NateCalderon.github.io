@@ -65,7 +65,7 @@ p{
 
 .images{
   text-align: center;
-  margin-top: 110px;
+  margin-top: 110px;  
 }
 
 .image1{
@@ -90,7 +90,8 @@ p{
 
 .names{
   display: flex;
-  margin-left: 17%;
-  gap: 0px 9.5%;
+  margin-left: 16.5%;
+  gap: 0px 9.7%;
+  text-align: center;
 }
 

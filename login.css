@@ -91,12 +91,17 @@
     text-align: center;
     width: 350px;
     margin: auto;
+    font-size: 20px;
   }    
 
   input[type=text] {
     background-color: #003366;
     color: #b6f0f3;
     width: 150px;
+  }
+  
+  input[type=text]::placeholder {
+    color: lightgray;
   }
   
   input[type=submit] {
