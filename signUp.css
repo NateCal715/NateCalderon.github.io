@@ -114,6 +114,18 @@
     pointer-events: auto;
   }
 
+  input[type=submit]:hover {
+    animation-name: gelatine;
+    animation-duration: 3s;
+  }
+
+  @keyframes gelatine {
+    from, to { transform: scale(1, 1); }
+    25% { transform: scale(0.9, 1.1); }
+    50% { transform: scale(1.1, 0.9); }
+    75% { transform: scale(0.95, 1.05); }
+  }
+
   label{
     color: blue;
   }
@@ -125,5 +137,14 @@
 
   .flex-container{
     display: flex;
+  }
+
+  .flex-container:hover{
+    animation: pulse 1s infinite ease-in-out alternate;
+  }
+
+  @keyframes pulse {
+    from { transform: scale(0.8); }
+    to { transform: scale(1.2); }
   }
  

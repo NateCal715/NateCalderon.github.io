@@ -71,6 +71,11 @@ html{
     padding: 5px;
   }
 
+  .show:hover {
+    animation-name: gelatine;
+    animation-duration: 3s;
+  }
+
   form {
     background-color: lightskyblue;
     text-align: center;
@@ -93,12 +98,29 @@ html{
     pointer-events: auto;
   }
 
+  input[type=button]:hover {
+    animation-name: gelatine;
+    animation-duration: 3s;
+  }
+
+  @keyframes gelatine {
+    from, to { transform: scale(1, 1); }
+    25% { transform: scale(0.9, 1.1); }
+    50% { transform: scale(1.1, 0.9); }
+    75% { transform: scale(0.95, 1.05); }
+  }
+
   .submit {
     background-color: #003366;
     color: #b6f0f3;
     padding: 10px 15px;
     border-radius: 8px;
     pointer-events: auto;
+  }
+
+  .submit:hover {
+    animation-name: gelatine;
+    animation-duration: 3s;
   }
 
   .buttonContainer{
@@ -112,6 +134,11 @@ html{
     margin-left: 10px;
   }
 
+  .button:hover {
+    animation-name: gelatine;
+    animation-duration: 3s;
+  }
+
   label{
     color: blue;
   }
@@ -119,17 +146,28 @@ html{
   img{
     height: 180px;
     width: 180px;
+    animation: bounce-in-right 2s ease;
   }
+
+  @keyframes bounce-in-right {
+    0% {
+      opacity: 0;
+      transform: translateX(2000px);
+    }
+    60% {
+      opacity: 1;
+      transform: translateX(-30px);
+    }
+    80% { transform: translateX(10px); }
+    100% { transform: translateX(0); }
+  }
+  
 
   .flex-container {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
   }
-
-  /* iframe{ */
-    /* margin-left: 110px; */
-  /* } */
 
   .messages{
     text-align: center;
