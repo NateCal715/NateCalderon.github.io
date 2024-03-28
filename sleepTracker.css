@@ -75,9 +75,9 @@ label{
 
 @keyframes gelatine {
     from, to { transform: scale(1, 1); }
-    25% { transform: scale(0.9, 1.1); }
-    50% { transform: scale(1.1, 0.9); }
-    75% { transform: scale(0.95, 1.05); }
+    25% { transform: scale(0.8, 1.0); }
+    50% { transform: scale(1.0, 0.8); }
+    75% { transform: scale(0.97, 1.08); }
 }
   
 .month{

@@ -105,9 +105,9 @@ html{
 
   @keyframes gelatine {
     from, to { transform: scale(1, 1); }
-    25% { transform: scale(0.9, 1.1); }
-    50% { transform: scale(1.1, 0.9); }
-    75% { transform: scale(0.95, 1.05); }
+    25% { transform: scale(0.8, 1.0); }
+    50% { transform: scale(1.0, 0.8); }
+    75% { transform: scale(0.97, 1.08); }
   }
 
   .submit {
@@ -156,16 +156,16 @@ html{
     }
     60% {
       opacity: 1;
-      transform: translateX(-30px);
+      transform: translateX(-32px);
     }
-    80% { transform: translateX(10px); }
+    80% { transform: translateX(12px); }
     100% { transform: translateX(0); }
   }
   
 
   .flex-container {
     display: flex;
-    flex-flow: row wrap;
+    flex-direction: row;
     justify-content: space-around;
   }
 
@@ -176,4 +176,9 @@ html{
   .workout-container{
     display: flex;
     padding: 10.5%
+  }
+
+  iframe{
+    border-color: #69E490;
+    border-width: 3px;
   }
