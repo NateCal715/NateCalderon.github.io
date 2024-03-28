@@ -64,7 +64,15 @@ h1 {
   border-radius: 5px;
   border: 1px solid #b6f0f3;
   background-color: #004182; 
-  color: lightskyblue;
+  color: white;
+}
+
+#post-forum input[type="text"]::placeholder{
+  color: white;
+}
+
+#post-forum textarea::placeholder{
+  color: white;
 }
 
 #post-forum button, .replyForm button {

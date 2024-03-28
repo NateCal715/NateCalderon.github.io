@@ -48,13 +48,20 @@ h2{
     font-size: 20px;
   }
 
-  img{
+  /* img{
     height: 3%;
     width: 3%;
-  }
+  } */
 
   .firstSource{
     display: flex;
+    height: 2%;
+    width: 2%;
+  }
+
+  #star1{
+    height: 3%;
+    width: 3%;
   }
   
   .secondSource{
@@ -68,4 +75,7 @@ h2{
   .fourthSource{
     display: flex;
   }
-  
+
+  .flex-container{
+    display: flex;
+  }
