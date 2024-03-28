@@ -55,20 +55,26 @@ label{
     color: #b6f0f3;
 }
 
+.header{
+    font-size: 20px;
+}
 .calculate {
     padding: 5px;
     background-color: #b6f0f3;
     color: blue;
     margin-left: 47%;
     border-radius: 5px;
+    font-size: 18px;
 }
 .month{
     color: blue;
     background-color: #b6f0f3;
+    font-size: 20px;
 }
 
 .sleep-hours-input {
     background-color: #b6f0f3;
+    font-size: 20px;
 }
 
 .dailySleepInputs{
@@ -93,6 +99,7 @@ label{
 .sleep-recommendations ul li {
     text-align: center;
     color: #b6f0f3;
+    font-size: 120%;
 }
 
 /* Updated styles to remove bullet points from sleep recommendations */

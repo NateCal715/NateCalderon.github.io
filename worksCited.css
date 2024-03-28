@@ -23,7 +23,7 @@ h2{
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 140%;
   }
   
   /* Change the color of links on hover */
@@ -55,27 +55,45 @@ h2{
 
   .firstSource{
     display: flex;
-    height: 2%;
-    width: 2%;
   }
 
   #star1{
-    height: 3%;
-    width: 3%;
+    width: 3.5%;
+    height: 3.5%;
   }
   
   .secondSource{
     display: flex;
   }
+
+  #star2{
+    width: 3.5%;
+    height: 3.5%;
+  }
   
   .thirdSource{
     display: flex;
+  }
+
+  #star3{
+    width: 3.5%;
+    height: 3.5%;
   }
   
   .fourthSource{
     display: flex;
   }
 
+  #star4{
+    width: 3.5%;
+    height: 3.5%;
+  }
+
   .flex-container{
     display: flex;
   }
+
+  img{
+    height: 180px;
+    width: 180px;
+  } 
