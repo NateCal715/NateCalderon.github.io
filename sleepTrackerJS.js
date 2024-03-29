@@ -33,7 +33,8 @@
       input.name = `day${day}`;
       input.placeholder = `Day ${day} hours`;
       input.className = 'sleep-hours-input';
-
+      // input.min = "1";
+      input.max = "24";
       // Repopulate saved data if available
       if (monthlySleepLogs[yearMonthKey] && monthlySleepLogs[yearMonthKey][day]) {
         input.value = monthlySleepLogs[yearMonthKey][day];
