@@ -82,6 +82,7 @@ html{
     width: 400px;
     height: 300px;
     margin: auto;
+    font-size: 16px;
   }    
 
   input[type=text] {
@@ -175,10 +176,17 @@ html{
 
   .workout-container{
     display: flex;
-    padding: 10.5%
+    justify-content: center;
+    text-align: center;
   }
 
   iframe{
     border-color: #69E490;
     border-width: 3px;
+  }
+
+  @media screen and (min-width: 1700px){
+    form{width: 500px; height: 350px; font-size: 20px}
+    input[type=button] {font-size: 20px;}
+    .submit {font-size: 20px;}
   }
