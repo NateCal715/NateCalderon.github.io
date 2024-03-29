@@ -89,10 +89,11 @@ label{
 .sleep-hours-input {
     background-color: #b6f0f3;
     font-size: 20px;
+    width: 140px;
 }
 
 .dailySleepInputs{
-    margin-left: 5%;
+    margin-left: 4%;
 }
 
 .sleep-hours-input::placeholder {
