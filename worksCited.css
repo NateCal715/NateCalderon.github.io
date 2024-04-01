@@ -14,7 +14,7 @@ h2{
 .topnav {
     background-color: #69E490;
     overflow: hidden;
-  }
+}
   
   /* Style the links inside the navigation bar */
   .topnav a {
@@ -47,11 +47,6 @@ h2{
     text-align: left;
     font-size: 20px;
   }
-
-  /* img{
-    height: 3%;
-    width: 3%;
-  } */
 
   .firstSource{
     display: flex;
@@ -125,6 +120,7 @@ h2{
 
   .flex-container{
     display: flex;
+    justify-content: center;
   }
 
   .flex-container:hover{
@@ -140,3 +136,22 @@ h2{
     height: 180px;
     width: 180px;
   } 
+
+  @media screen and (min-width: 1700px){
+    .topnav a {
+      font-size: 30px;
+    }
+  
+    h1 {
+        font-size: 60px;
+    }
+
+    img{
+      height: 220px;
+      width: 220px;
+    }
+
+    p{
+      font-size: 25px;
+    }
+  }

@@ -16,8 +16,8 @@ function createPost() {
     <h3>${title}</h3>
     <p>${content}</p>
     <div class="replies"></div>
-    <button onclick="showReplyForm(this.nextElementSibling.nextElementSibling)">Reply</button>
-    <button onclick="toggleReplies(this)">Toggle Replies</button>
+    <button class="replyButton" onclick="showReplyForm(this.nextElementSibling.nextElementSibling)">Reply</button>
+    <button class="replyButton" onclick="toggleReplies(this)">Toggle Replies</button>
     <div class="replyForm" style="display:none;">
     <input type="text" class="replyInput" placeholder="Write a reply...">
     <button onclick="addReply(this, '${postId}')">Post Reply</button>
@@ -44,7 +44,7 @@ function addReply(button, parentId) {
     replyElement.innerHTML = `
     <p>${replyContent}</p>
     <div class="replies"></div> <!-- Container for nested replies -->
-    <button onclick="showReplyForm(this.nextElementSibling)">Reply</button>
+    <button class="replyButton" onclick="showReplyForm(this.nextElementSibling)">Reply</button>
     <div class="replyForm" style="display:none;">
     <input type="text" class="replyInput" placeholder="Write a reply...">
     <button onclick="addReply(this, '${replyId}')">Post Reply</button>

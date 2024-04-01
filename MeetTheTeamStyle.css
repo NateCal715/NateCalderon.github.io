@@ -57,15 +57,11 @@ p{
   float: right;
 }
 
-.flex-container {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-}
-
 .images{
-  text-align: center;
+  display: flex;
+  flex-direction: row;
   margin-top: 110px;  
+  justify-content: center;
 }
 
 .image1{
@@ -88,10 +84,29 @@ p{
   border: 5px solid #b6f0f3;
 }
 
-.names{
-  display: flex;
-  margin-left: 16.5%;
-  gap: 0px 9.7%;
-  text-align: center;
-}
+@media screen and (min-width: 1700px){
+  .topnav a {
+    font-size: 30px;
+  }
 
+  h1 {
+    font-size: 60px;
+  }
+
+  h2{
+    font-size: 35px;
+  }
+
+  h3{
+    font-size: 25px;
+  }
+
+  h4{
+    font-size: 20px;
+  }
+
+  img{
+    height: 300px;
+    width: 300px;
+  }
+}

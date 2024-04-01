@@ -136,6 +136,7 @@
 
   .flex-container{
     display: flex;
+    justify-content: center;
   }
   
   .flex-container:hover{
@@ -145,4 +146,46 @@
   @keyframes pulse {
     from { transform: scale(0.95); }
     to { transform: scale(1.4); }
+  }
+
+  @media screen and (min-width: 1700px){
+    .topnav a {
+      font-size: 30px;
+    }
+  
+    h1 {
+        font-size: 60px;
+    }
+
+    form{
+      font-size: 25px;
+      height: 370px;
+      width: 450px;
+    }
+
+    input[type=button] {
+      font-size: 20px;
+    }
+
+    .submit {
+      font-size: 20px;
+    }
+
+    input[type=text]::placeholder {
+      font-size: 20px;
+    }
+
+    input[type=text]{
+      height: 30px;
+      width: 100px;
+    }
+
+    p{
+      font-size: 25px;
+    }
+
+    img{
+      height: 220px;
+      width: 220px;
+    } 
   }

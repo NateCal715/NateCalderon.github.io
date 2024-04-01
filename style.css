@@ -106,19 +106,19 @@ h4{
   align-items: flex-end;
 }
 
-.BMI{
+.chart{
   background-color: lightblue;
   height: 160px;
   width: 200px;
 }
 
-.sleep{
+.plate{
   background-color: lightskyblue;
   height: 160px;
   width: 200px;
 }
 
-.steps{
+.swimming{
   background-color: lightsteelblue;
   height: 160px;
   width: 200px
@@ -198,4 +198,66 @@ img{
   60% { transform: translateX(10%) rotate(2deg); }
   75% { transform: translateX(-5%) rotate(-1deg); }
   100% { transform: translateX(0%); }
+}
+
+@media screen and (min-width: 1700px){
+
+  .flex-container{
+    width: 300px;
+    height: 1000px;
+  }
+  img{
+    height: 700px;
+    width: 700px;
+  }
+
+  .chart{
+    height: 260px;
+    width: 300px;
+  }
+  
+  .plate{
+    height: 260px;
+    width: 300px;
+  }
+  
+  .swimming{
+    height: 260px;
+    width: 300px
+  }
+
+  #chart{
+    height: 240px;
+    width: 240px;
+    margin-left: 33px;
+  }
+  
+  #plate{
+    height: 230px;
+    width: 280px;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+
+  #swimming{
+    height: 240px;
+    width: 300px;
+  }
+
+  .logo{
+    margin-left: 250%;
+  }
+
+  .button {
+    font-size: 35px;
+    width: 230px;
+  }
+
+  .topnav a {
+    font-size: 30px;
+  }
+
+  h1 {
+    font-size: 60px;
+  }
 }
