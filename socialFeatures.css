@@ -8,13 +8,16 @@ body {
   padding: 20px;
 }
 
-h1, h2, h3 {
+h1{
+  color: #b6f0f3;
+  font-size: 30px;
+}
+h2, h3 {
   color: #b6f0f3;
 }
 
 h1 {
   text-align: center;
-  margin-bottom: 40px; 
 }
 
 h2 {
