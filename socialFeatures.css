@@ -49,6 +49,46 @@ h2 {
   color: blue;
 }
 
+.dropbtn {
+  background-color: lightskyblue;
+  color: blue;
+  padding: 5px;
+  font-size: 10px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: none;
+  margin-bottom: 5%;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #69E490;
+  min-width: 60px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: blue;
+  padding: 4px 5px;
+  text-decoration: none;
+  display: block;
+  font-size: 10px;
+}
+
+.dropdown-content a:hover {
+  background-color: lightsteelblue;
+  color: white;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
 .align-right{
   float: right;
 }
@@ -111,8 +151,8 @@ from, to { transform: scale(1, 1); }
 }
 
 .post, .replyForm, .reply {
-  margin-top: 20px;
-  padding: 15px; 
+  margin-top: 15px;
+  padding: 2px; 
   background-color: #005480;
   color: lightskyblue;
   border-radius: 5px;
@@ -129,6 +169,7 @@ from, to { transform: scale(1, 1); }
   color: #003366;
   padding: 5px;
   border-radius: 5px;
+  margin-top: 2%;
 }
 
 @media screen and (min-width: 1700px){
@@ -169,5 +210,68 @@ from, to { transform: scale(1, 1); }
   
   #post-forum button, .replyForm button {
     font-size: 20px;
+  }
+
+  #posts-container{
+    font-size: 20px;
+  }
+
+  .replyButton{
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 545px){
+  h1{
+    font-size: 15px;
+  }
+
+  h2{
+    font-size: 12px;
+  }
+
+  h3{
+    font-size: 10px;
+  }
+  
+  .dropdown{
+    display: inline-block;
+  }
+
+  .topnav{
+    display: none;
+  }
+
+
+  #post-forum input[type="text"]{
+    font-size: 6px;
+    padding: 5px;
+  } 
+
+  #post-forum textarea, .replyInput {
+    font-size: 6px;
+    padding: 5px;
+  }
+  
+  #post-forum input[type="text"]::placeholder{
+    font-size: 6px;
+  }
+  
+  #post-forum textarea::placeholder{
+    font-size: 6px;
+  }
+  
+  #post-forum button, .replyForm button {
+    font-size: 8px;
+    padding: 5px;
+  }
+
+  #posts-container{
+    font-size: 7px;
+  }
+
+  .replyButton{
+    font-size: 5px;
+    padding: 2px;
   }
 }
