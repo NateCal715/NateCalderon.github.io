@@ -8,6 +8,7 @@ h3{
     text-align: center;
     color: #b6f0f3;
 }
+
 .topnav {
     background-color: #69E490;
     overflow: hidden;
@@ -28,7 +29,7 @@ h3{
 
 .topnav a.active {
     background-color: lightskyblue;
-    color: white;
+    color: blue;
 }
 
 .dropbtn {
