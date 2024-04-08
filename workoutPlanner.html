@@ -6,7 +6,7 @@
   </head>
   <body>
     <h1>Workout Planner</h1>
-    <div class="topnav">
+    <nav class="topnav">
       <a class="active" href="index.html">Home</a>
       <a href="sleepTracker.html">Sleep Tracker</a>
       <a href="NutritionDataBase.html">Meal Planner</a>
@@ -17,8 +17,8 @@
       <div class="align-right">
         <a href="worksCited.html" class="worksCited" >Works Cited</a>
       </div>
-    </div>
-    <div class="dropdown">
+    </nav>
+    <nav class="dropdown">
       <button class="dropbtn">Menu</button>
       <div class="dropdown-content">
         <a class="active" href="index.html">Home</a>
@@ -30,16 +30,16 @@
         <a href="signUp.html">Sign Up</a>
         <a href="worksCited.html" class="worksCited" >Works Cited</a>
       </div>
-    </div>
-    <div class="showMessage">
+    </nav>
+    <header class="showMessage">
       <br>
       <h2>Click show if you would like to show the BMI information</h2> 
       <button class="show" onClick="showBMI()">Show</button>
       <button class="button" onClick="showImperial()">Imperial</button>
       <button class ="button" onClick="showMetric()">Metric</button>
       <br><br>
-    </div>
-    <div class="flex-container">
+    </header>
+    <main class="flex-container">
       <form name="BMIformImperial" action="" method="GET">
         <h3>BMI Calculator</h3>
         <h4>Height</h4>
@@ -90,33 +90,33 @@
         <br>
         <img id="weights" src="https://cdn3.iconfinder.com/data/icons/sport-40/1772/Vinyl_Dumbbells_Aerobics_Fitness_Exercise-512.png" alt="Weights">
       </form>
-    </div>
-    <div class="messages">
+    </main>
+    <aside class="messages">
       <br>
       <h2 id="BMIvalue"></h2>
       <br><br>
       <h2 id="stepValue"></h2>
-    </div>
-    <div class= "workout-container">
-      <div class="videoContainer" id = "buildMuscleVideos">
+    </aside>
+    <section class= "workout-container">
+      <article class="videoContainer" id = "buildMuscleVideos">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/GViX8riaHX4?si=h4rV1BqnqHTboqkF" title="YouTube video player" frameborder="50" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>;
         <iframe width="560" height="315" src="https://www.youtube.com/embed/geK9GNKGRpo?si=a3by2kwUoguXHR8n" title="YouTube video player" frameborder="50" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>;
         <iframe width="560" height="315" src="https://www.youtube.com/embed/SjSJU-LOLf8?si=PfOfrOW4mTIzcSru" title="YouTube video player" frameborder="50" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>;
         <iframe width="560" height="315" src="https://www.youtube.com/embed/nG0zNBpGCb8?si=hfToz5s1TMFJSuh9" title="YouTube video player" frameborder="50" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      </div>
-      <div class="videoContainer" id = "loseWeightVideos">
+      </article>
+      <article class="videoContainer" id = "loseWeightVideos">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/eW71SoYXDK8?si=puMSPsek_C1YkaNR" title="YouTube video player" frameborder="50" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/kg5hXfcVm6g?si=mS2269pGvGxxIFIQ" title="YouTube video player" frameborder="50" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>;
         <iframe width="560" height="315" src="https://www.youtube.com/embed/5YR2E-3pvy8?si=L46INuhbMGXM4Hq3" title="YouTube video player" frameborder="50" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>;
         <iframe width="560" height="315" src="https://www.youtube.com/embed/Q-n2SOnyr1Y?si=B9CTF432fv7Dxaqr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      </div>
-      <div class="videoContainer" id = "buildEnduranceVideos">
+      </article>
+      <article class="videoContainer" id = "buildEnduranceVideos">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/CYhn9no7tAo?si=Pr3w1xC5rRPkWcBy" title="YouTube video player" frameborder="50" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>;
         <iframe width="560" height="315" src="https://www.youtube.com/embed/6Fr3LlLe0V8?si=ino7R6S233nDQ7eE" title="YouTube video player" frameborder="50" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>;
         <iframe width="560" height="315" src="https://www.youtube.com/embed/RF_YiV3LA58?si=88P7v1R3_AOj1YSk" title="YouTube video player" frameborder="50" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>;
         <iframe width="560" height="315" src="https://www.youtube.com/embed/h4r7mO61pkE?si=ajPRqdGxNkK1sKIE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      </div>
-    </div>
+      </article>
+    </section>
     <script src="workoutPlannerJS.js"></script>
   </body>
 </html>
