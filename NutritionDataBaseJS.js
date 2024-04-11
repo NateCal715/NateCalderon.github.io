@@ -8,6 +8,12 @@ function showCheckboxes() {
       show = true;
   }
 }
+function addTextBox() {
+    const textEntry = document.querySelector('.text-entry');
+    const clonedTextEntry = textEntry.cloneNode(true);
+    clonedTextEntry.value - "";
+    document.getElementbyId('text-entry-container').appendChild(clonedTextEntry);
+}
 hideMeals();
 function hideMeals(){
     mealformBreakfast.style.display = "none";
