@@ -100,14 +100,14 @@ h4{
   }
  */
 
-/*form {
-    background-color: lightskyblue;
+form {
+    /* background-color: lightskyblue; */
     text-align: center;
-    width: 400px;
+    /* width: 400px;
     height: 300px;
-    margin: auto;
+    margin: auto; */
   }    
-*/
+
 
 p1{
   text-align: center;
@@ -117,7 +117,7 @@ p1{
 
 p2{
   text-align: center;
-  color: #b6f0f3;
+  color: white;
 }
 
 input[type=radio] {
@@ -134,4 +134,6 @@ input[type=radio] {
   text-align: center;
 }
 
-
+foodInput{
+  text-align: center;
+}

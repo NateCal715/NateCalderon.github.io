@@ -127,8 +127,10 @@
     <section>
       <p2>
             <!-- Container for text entry boxes -->
+          <div id="foodInput">
             <input type="text" id="food" placeholder="Enter food">
             <button onclick="fetchData()">Search</button><br>
+          </div>
             <div id="results-container"></div>
             
             <script src="ImplementAPI.js"></script>
@@ -181,9 +183,11 @@
     <p3>
       <form name = "waterForm" action="" method="GET">
         <h3>Water Intake</h3>
-        <label for="water">Water by fl oz</label>
-        <input type="text" name="waterInput" value="">
-        <input type="button" value="Log" onClick="waterIntake(this.form)">
+        <!-- <label for="water">Water by fl oz</label> -->
+        <div class="water">
+          <input type="text" name="waterInput" value="" placeholder="Water by fl oz">
+          <input type="button" value="Log" onClick="waterIntake(this.form)">
+        </div>
       </form> 
       <div class="messages">
       <h2 id="waterValue"></h2>
