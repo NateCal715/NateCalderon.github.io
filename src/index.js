@@ -1,5 +1,12 @@
 import { initializeApp } from 'firebase/app'
-import { getAuth } from 'firebase/auth'
+
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  signOut, signInWithEmailAndPassword,
+  onAuthStateChanged
+} from 'firebase/auth'
+
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
     apiKey: "AIzaSyB_vZta6FIMoSPYkqhS2ljRjjEjAiQ6qxg",
@@ -16,3 +23,22 @@ const firebaseConfig = {
 
 // init firebase services
 const auth = getAuth()
+
+
+// Signing Users up with Email and Password
+const signupForm = document.querySelector('.signup')
+signupForm.addEventListener('submit', (e) => {
+  e.preventDefault()
+
+  const email = signupForm.email.value
+  const password = signupForm.password.value
+
+  createUserWithEmailAndPassword(auth, email, password)
+    .then((cred) => {
+      console.log('user created:', cred.user)
+      signupForm.reset()
+    })
+    .catch((err) => {
+      console.log(err.message)
+    })
+})
