@@ -93,90 +93,36 @@ h2{
     margin-top: 5%;
   }
 
-  #star1{
-    width: 3.5%;
-    height: 3.5%;
-  }
-
-  #star1:hover {
-    animation: elastic-spin 1s infinite ease;
-  }
-  
   .secondSource{
     display: flex;
-  }
-
-  #star2{
-    width: 3.5%;
-    height: 3.5%;
-  }
-  
-  #star2:hover {
-    animation: elastic-spin 1s infinite ease;
   }
 
   .thirdSource{
     display: flex;
   }
 
-  #star3{
-    width: 3.5%;
-    height: 3.5%;
-  }
-
-  #star3:hover {
-    animation: elastic-spin 1s infinite ease;
-  }
-  
   .fourthSource{
     display: flex;
-  }
-
-  #star4{
-    width: 3.5%;
-    height: 3.5%;
-  }
-
-  #star4:hover {
-    animation: elastic-spin 1s infinite ease;
   }
 
   .fifthSource{
     display: flex;
   }
 
-  #star5{
-    width: 3.5%;
-    height: 3.5%;
-  }
-
-  #star5:hover {
-    animation: elastic-spin 1s infinite ease;
-  }
-
   .sixthSource{
     display: flex;
-  }
-
-  #star6{
-    width: 3.5%;
-    height: 3.5%;
-  }
-
-  #star6:hover {
-    animation: elastic-spin 1s infinite ease;
   }
 
   .seventhSource{
     display: flex;
   }
 
-  #star7{
+  #star{
     width: 3.5%;
     height: 3.5%;
   }
 
-  #star7:hover {
+  #star:hover {
     animation: elastic-spin 1s infinite ease;
   }
 
