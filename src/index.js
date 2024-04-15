@@ -63,7 +63,7 @@ loginForm.addEventListener('submit', (e) => {
 
   signInWithEmailAndPassword(auth, email, password)
     .then((cred) => {
-      console.log('user logged in:' cred.user)
+      console.log('user logged in:', cred.user)
     })
     .catch((err) => {
       console.log(err.message)
