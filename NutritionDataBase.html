@@ -10,11 +10,12 @@
       <a class="active" href="index.html">Home</a>
       <a href="sleepTracker.html">Sleep Tracker</a>
       <a href="workoutPlanner.html">Workout Planner</a>
+      <a href="NutritionDataBase.html">Meal Planner</a>
       <a href="socialFeatures.html">Achieve and Share</a>
       <a href="MeetTheTeam.html">Meet the Team!</a>
       <a href="login.html">Log In</a>
       <a href="signUp.html">Sign Up</a>
-      <div class="align-right">
+<div class="align-right">
         <a href="worksCited.html" class="worksCited" >Works Cited</a>
       </div>
    </div>
@@ -93,6 +94,18 @@
         </div>
       </div>
     </form>
+    <script>
+      function showCheckboxes() {
+        let checkboxes = document.getElementById("checkBoxes");
+        if (show) {
+            checkboxes.style.display = "block";
+            show = false;
+        } else {
+            checkboxes.style.display = "none";
+            show = true;
+        }
+      }
+    </script>
       <!-- Want to make it so when Food Allergies is selected, a text box appears and prompts users to input specific Food(s) -->
       <!-- <div id="allergyBox" style="display: none;">
       <label for="allergies">Enter Specific Food Allergies:</label><br>
@@ -110,12 +123,21 @@
         }
     }
 </script> --> 
-      <br>
-      
+      <br>     
     </p1>
     <section>
       <p2>
-      <h3>What did you eat today?</h3>
+            <!-- Container for text entry boxes -->
+          <div id="foodInput">
+            <input type="text" id="food" placeholder="Enter food">
+            <button onclick="fetchData()">Search</button><br>
+          </div>
+            <div id="results-container"></div>
+            
+            <script src="ImplementAPI.js"></script>
+      </p2>
+  <!--
+        <h3>What did you eat today?</h3>
      <div class="breakfastButton">
       <button class="Breakfast" onClick="showBreakfast()">Breakfast</button>
      </div>
@@ -126,7 +148,9 @@
       <button class="Dinner" onClick="showDinner()">Dinner</button>
        </div>
       <br>
+      -->
 <!--<div class="flex-container">-->
+<!--
    <form name="mealformBreakfast" action="" method="GET">
      <label for="entree">Entree</label>
      <input type="text" name="entreeInput" value=""><br>
@@ -155,17 +179,79 @@
      <input type="text" name="beverageInput" value=""><br>
      <input type="button" value="Submit" onClick="dinnerIntake(this.form)">
    </form>
+  -->
 <!--</div>-->
+    <p3>
       <form name = "waterForm" action="" method="GET">
         <h3>Water Intake</h3>
-        <label for="water">Water by fl oz</label>
-        <input type="text" name="waterInput" value="">
-        <input type="button" value="Log" onClick="waterIntake(this.form)">
+        <!-- <label for="water">Water by fl oz</label> -->
+        <div class="water">
+          <input type="text" name="waterInput" value="" placeholder="Water by fl oz">
+          <input type="button" value="Log" onClick="waterIntake(this.form)">
+        </div>
       </form> 
       <div class="messages">
       <h2 id="waterValue"></h2>
     </div>
-    </p2>
+      <script>   
+      hideMeals();
+          function hideMeals(){
+      mealformBreakfast.style.display = "none";
+      mealformLunch.style.display = "none";
+      mealformDinner.style.display = "none";
+      heading.style.display = "none";
+          }
+          function showBreakfast(){
+      mealformBreakfast.style.display = "block";
+      mealformLunch.style.display = "none";
+      mealformDinner.style.display = "none";
+      heading.style.display = "block";
+          }
+          function showLunch(){
+      mealformBreakfast.style.display = "none";
+      mealformLunch.style.display = "block";
+      mealformDinner.style.display = "none";
+      heading.style.display = "block";
+          }
+          function showDinner(){
+      mealformBreakfast.style.display = "none";
+      mealformLunch.style.display = "none";
+      mealformDinner.style.display = "block";
+      heading.style.display = "block";
+          }
+        
+          function breakfastIntake (form) {
+            let entree = form.entreeInput.value;
+            let appetizer = form.appetizerInput.value;
+            let beverage = form.beverageInput.value;
+            let displayMessage = "You have not recorded anything consumed on this day";
+
+            if (!isEmpty(entree)) {
+              displayMessage = 'You recorded ${entree} eaten during breakfast on this day';
+            }
+            if (!isEmpty(appetizer)) {
+              displayMessage = 'You recorded ${appetizer} eaten during breakfast on this day';
+            }
+            if (!isEmpty(beverage)) {
+              displayMessage = 'You recorded ${beverage} drank during breakfast on this day';
+            } 
+          document.getElementbyId("breakfastValue").innerHTML = displayMessage;
+          }
+        
+          function waterIntake (form) {
+        let water = form.waterInput.value;
+        let displayMessage = "You have not drank any water today";
+
+        if (!isEmpty(water)) {
+          displayMessage = `You drank ${water} fluid ounces of water today!`;
+        }
+        document.getElementById("waterValue").innerHTML = displayMessage;
+      }
+        function isEmpty(input){
+        return input === "" || input === undefined || input === NaN || input === "0" ? true : false;
+        }
+        </script>
+    </p3>
 
       
       <!-- Categories for Major Food Groups
@@ -187,14 +273,14 @@
       </form> -->    
        
     </section>
-    <section2>
-      <h4>Your Dietary journey thus far!</h4>
-      <figure1>
-      <img src= "" alt="PlaceHolder" width="200px" height="200px">
-      <figcaption>Graph presenting Caloric intake over time</figcaption>
-      </figure1>
-    </section2>
-    <script src="NutritionDataBaseJS.js"></script>
+<section2>
+  <h4>Your Dietary journey thus far!</h4>
+  <figure1>
+    <img src= "" alt="PlaceHolder" width="200px" height="200px">
+    <figcaption>Graph presenting Caloric intake over time</figcaption>
+  </figure1>
+</section2>
+<script src="NutritionDataBaseJS.js"></script>
   </body>
   <footer>
      <div class="container">

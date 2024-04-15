@@ -16,11 +16,11 @@ h4{
   color: white;
 }
 
-/* p{ */
-  /* text-align: center; */
-  /* color: lightblue; */
-  /* font-size: large; */
-/* } */
+/* p{ 
+  text-align: center;
+  color: lightblue;
+  font-size: large;
+} */
 
 .topnav {
   background-color: #69E490;
@@ -47,6 +47,47 @@ h4{
 .topnav a.active {
   background-color: lightskyblue;
   color: blue;
+}
+
+
+.dropbtn {
+  background-color: lightskyblue;
+  color: blue;
+  padding: 5px;
+  font-size: 10px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: none;
+  margin-bottom: 5%;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #69E490;
+  min-width: 60px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: blue;
+  padding: 4px 5px;
+  text-decoration: none;
+  display: block;
+  font-size: 10px;
+}
+
+.dropdown-content a:hover {
+  background-color: lightsteelblue;
+  color: white;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
 .align-right{
@@ -103,7 +144,6 @@ h4{
   width: 200px;
   height: 500px;
   flex-wrap: wrap;
-  align-items: flex-end;
 }
 
 .chart{
@@ -248,6 +288,10 @@ img{
     margin-left: 250%;
   }
 
+  .altLogo{
+    display: none;
+  }
+
   .button {
     font-size: 35px;
     width: 230px;
@@ -259,5 +303,71 @@ img{
 
   h1 {
     font-size: 60px;
+  }
+}
+
+@media screen and (max-width: 545px){
+
+  h1{
+    font-size: 20px;
+  }
+  .dropdown{
+    display: inline-block;
+  }
+
+  .topnav{
+    display: none;
+  }
+  
+  .button{
+    display: none;
+  }
+
+  .flex-container{
+    height: 150px;
+  }
+
+  .chart{
+    background-color: lightblue;
+    height: 50px;
+    width: 60px;
+  }
+  
+  .plate{
+    background-color: lightskyblue;
+    height: 50px;
+    width: 60px;
+  }
+  
+  .swimming{
+    background-color: lightsteelblue;
+    height: 50px;
+    width: 60px
+  }
+  
+  .logo{
+    margin-left: 80%;
+  }
+
+  #chart{
+    height: 50px;
+    width: 50px;
+    margin-left: 10%;
+  }
+
+  #plate{
+    height: 50px;
+    width: 60px;
+    margin-left: 0%;
+  }
+
+  #swimming{
+    height: 50px;
+    width: 60px;
+  }
+
+  .person{
+    height: 150px;
+    width: 150px;
   }
 }

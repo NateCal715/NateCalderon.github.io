@@ -8,6 +8,7 @@ h3{
     text-align: center;
     color: #b6f0f3;
 }
+
 .topnav {
     background-color: #69E490;
     overflow: hidden;
@@ -28,9 +29,49 @@ h3{
 
 .topnav a.active {
     background-color: lightskyblue;
-    color: white;
+    color: blue;
 }
 
+.dropbtn {
+    background-color: lightskyblue;
+    color: blue;
+    padding: 5px;
+    font-size: 10px;
+    border: none;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: none;
+    margin-bottom: 5%;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #69E490;
+    min-width: 60px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: blue;
+    padding: 4px 5px;
+    text-decoration: none;
+    display: block;
+    font-size: 10px;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: lightsteelblue;
+    color: white;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
 .align-right{
     float: right;
   }
@@ -165,3 +206,61 @@ label{
         margin-left: 6%;
     }
   }
+
+  @media screen and (max-width: 545px){
+    h1{
+        font-size: 20px;
+    }
+
+    h2{
+        font-size: 12px;
+    }
+
+    .dropdown{
+      display: inline-block;
+      margin-bottom: 0%;
+    }
+  
+    .topnav{
+      display: none;
+    }
+
+    .month{
+        font-size: 10px;
+    }
+
+    .header{
+        font-size: 10px;
+    }
+
+    .month-container{
+        margin-right: 6%;
+    }
+
+    .dailySleepInputs{
+        margin-left: 3.5%;
+    }
+
+    .sleep-hours-input {
+        font-size: 8px;
+        width: 65px;
+    }
+
+    .calculate {
+        margin-right: 6%;
+        font-size: 8px;
+        padding: 3px;
+    }
+
+    .sleep-recommendations h2,
+    .sleep-recommendations ul,
+    .sleep-recommendations ul li {
+        font-size: 60%;
+}
+}  
+
+@media screen and (min-width: 1900px){
+    .dailySleepInputs{
+        margin-left: 3%;
+    }
+}

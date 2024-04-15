@@ -13,6 +13,7 @@
   </header>
   <nav class="topnav">
     <a class="active" href="index.html">Home</a>
+    <a href="sleepTracker.html">Sleep Tracker</a>
     <a href="workoutPlanner.html">Workout Planner</a>
     <a href="NutritionDataBase.html">Meal Planner</a>
     <a href="socialFeatures.html">Achieve and Share</a>
@@ -23,13 +24,28 @@
       <a href="worksCited.html" class="worksCited" >Works Cited</a>
     </div>
   </nav>
+  <div class="dropdown">
+    <button class="dropbtn">Menu</button>
+    <div class="dropdown-content">
+      <a class="active" href="index.html">Home</a>
+      <a href="workoutPlanner.html">Workout Planner</a>
+      <a href="NutritionDataBase.html">Meal Planner</a>
+      <a href="socialFeatures.html">Achieve and Share</a>
+      <a href="MeetTheTeam.html">Meet the Team!</a>
+      <a href="login.html">Log In</a>
+      <a href="signUp.html">Sign Up</a>
+      <a href="worksCited.html" class="worksCited" >Works Cited</a>
+    </div>
+  </div>
   <main>
     <section class="sleep-log">
       <h2>Log Daily Sleep Hours</h2>
-      <label class= "header" for="monthSelector">Select Month:</label>
-      <select class = "month header" id="monthSelector" onchange="createDayInputs(this.value, new Date().getFullYear())">
+      <div class="month-container">
+        <label class= "header" for="monthSelector">Select Month:</label>
+        <select class = "month header" id="monthSelector" onchange="createDayInputs(this.value, new Date().getFullYear())">
         <!-- Options added by JavaScript -->
-      </select>
+        </select>
+      </div>
       <div id="dailySleepInputs" class="dailySleepInputs">
         <!-- Daily inputs added by JavaScript -->
       </div>

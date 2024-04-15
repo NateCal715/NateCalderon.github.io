@@ -74,4 +74,21 @@ function toggleReplies(button) {
         button.textContent = 'Show Replies';
         }
     }
-    
+
+//functions for Challenge and Achievements section
+function completeChallenge(button, trophyName) {
+    //mark the challenge as completed
+    button.disabled = true; //disable the button to prevent multiple submissions
+    button.textContent = "Challenge Completed!"; //update button text
+
+    //add trophy to the achievements
+    addTrophyToAchievements(trophyName);
+}
+
+function addTrophyToAchievements(trophyName) {
+    const achievementsContainer = document.getElementById('achievements-container');
+    const trophyElement = document.createElement('div');
+    trophyElement.className = 'achievement-item';
+    trophyElement.innerHTML = `<i class="fa-solid fa-trophy"></i> ${trophyName}`;
+    achievementsContainer.appendChild(trophyElement);
+}
