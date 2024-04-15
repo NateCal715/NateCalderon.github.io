@@ -2,7 +2,9 @@
 <html lang="en">
     <head>
         <link rel="stylesheet" href="socialFeatures.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         <title>Social Features</title>
+
     </head>
     <body>
         <section id="header">
@@ -39,27 +41,22 @@
         <section id = "challenges">
             <h3>Current Challenges</h3>
             <div class = "challenge-list">
+
                 <!--Challenge 1-->
                 <div class = "challenge-item">
                     <h4>10,000 Steps in a Day</h4>
                     <p>Walk 10,000 steps today to complete this challenge!</p>
-                    <div id="steps-challenge-status"></div>
+                    <button class="challenge-button" onclick="completeChallenge(this, '10,000 Steps Challenge Trophy')">Mark if you completed this challenge</button>
                 </div>
-            </div>
 
+            </div>
         </section>
 
-        <section id = "achievements">
+        <section id="achievements">
             <h3>Your Achievements</h3>
-            <div class = "achievements-container">
-                <div class = "achievement-item"></div>
-
-                
-                
-            </div>
-            
-
+            <div id="achievements-container"></div>
         </section>
+
 
         <section id="forum">
             <h3>Forum</h3>
@@ -70,7 +67,9 @@
             </div>
             <div id="posts-container"></div>
         </section>
+
         <script src="socialFeatureJS.js"></script>
+
         <footer></footer>
     </body>
 </html>

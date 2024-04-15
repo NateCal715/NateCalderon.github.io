@@ -5,7 +5,6 @@ html {
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body { 
@@ -228,7 +227,7 @@ from, to { transform: scale(1, 1); }
 
 @media screen and (max-width: 545px){
   h1{
-    font-size: 15px;
+    font-size: 20px;
   }
 
   h2{
@@ -322,4 +321,11 @@ from, to { transform: scale(1, 1); }
 .challenge-item h4, .challenge-item p {
   color: lightskyblue;
   text-align: center;
+}
+
+.challenge-button {
+  color: lightskyblue;
+  background-color: #1A1235;
+  border-radius: 3px;
+  cursor: pointer;
 }
