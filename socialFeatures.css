@@ -2,6 +2,12 @@ html {
   background-color: #1A1235;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body { 
   /* font-family: Arial, sans-serif; */
   line-height: 1.6;
@@ -11,13 +17,12 @@ body {
 h1{
   color: #b6f0f3;
   font-size: 30px;
-}
-h2, h3 {
-  color: #b6f0f3;
+  text-align: center; 
+  margin-bottom: 20px;
 }
 
-h1 {
-  text-align: center;
+h2, h3 {
+  color: #b6f0f3;
 }
 
 h2 {
@@ -274,4 +279,47 @@ from, to { transform: scale(1, 1); }
     font-size: 5px;
     padding: 2px;
   }
+}
+
+/*--Challenges--*/
+
+#challenges {
+  background-color: #007399; 
+  color: lightskyblue; 
+  padding: 20px;
+  border-radius: 5px;
+  margin: 20px 0;
+}
+
+.challenge-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.challenge-item {
+  background-color: #005480; 
+  border: 1px solid #b6f0f3;
+  padding: 15px;
+  border-radius: 5px;
+  width: 18%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.challenge-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+#steps-challenge-status {
+  font-size: 16px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.challenge-item h4, .challenge-item p {
+  color: lightskyblue;
+  text-align: center;
 }
