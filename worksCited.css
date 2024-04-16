@@ -23,7 +23,7 @@ h2{
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 140%;
+    font-size: 20px;
   }
   
   /* Change the color of links on hover */
@@ -93,65 +93,36 @@ h2{
     margin-top: 5%;
   }
 
-  #star1{
-    width: 3.5%;
-    height: 3.5%;
-  }
-
-  #star1:hover {
-    animation: elastic-spin 1s infinite ease;
-  }
-  
   .secondSource{
     display: flex;
-  }
-
-  #star2{
-    width: 3.5%;
-    height: 3.5%;
-  }
-  
-  #star2:hover {
-    animation: elastic-spin 1s infinite ease;
   }
 
   .thirdSource{
     display: flex;
   }
 
-  #star3{
-    width: 3.5%;
-    height: 3.5%;
-  }
-
-  #star3:hover {
-    animation: elastic-spin 1s infinite ease;
-  }
-  
   .fourthSource{
     display: flex;
-  }
-
-  #star4{
-    width: 3.5%;
-    height: 3.5%;
-  }
-
-  #star4:hover {
-    animation: elastic-spin 1s infinite ease;
   }
 
   .fifthSource{
     display: flex;
   }
 
-  #star5{
-    width: 3.5%;
-    height: 3.5%;
-    margin-bottom: 5%;
+  .sixthSource{
+    display: flex;
   }
 
-  #star5:hover {
+  .seventhSource{
+    display: flex;
+  }
+
+  #star{
+    width: 3.5%;
+    height: 3.5%;
+  }
+
+  #star:hover {
     animation: elastic-spin 1s infinite ease;
   }
 
@@ -197,7 +168,7 @@ h2{
       font-size: 25px;
     }
 
-    #star5{
+    #star7{
       margin-bottom: 3%;
     }
   }
@@ -244,6 +215,16 @@ h2{
     }
 
     #star5{
+      width: 5.5%;
+      height: 5.5%;
+    }
+
+    #star6{
+      width: 5.5%;
+      height: 5.5%;
+    }
+
+    #star7{
       width: 5.5%;
       height: 5.5%;
     }

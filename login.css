@@ -86,22 +86,21 @@
  .container{
    text-align: center;
  }
- .button {
+ .loginButton {
    display: inline-block;
    border-radius: 4px;
-   background-color: lightskyblue;
+   background-color: #003366;
    border: none;
-   color: blue;
+   color: #b6f0f3;
    text-align: center;
-   font-size: 28px;
-   padding: 20px;
-   width: 200px;
-   transition: all 0.5s;
+   font-size: 20px;
+   padding: 5px;
+   /* transition: all 0.5s; */
    cursor: pointer;
    margin: 5px;
  }
  
- .button span {
+ /* .button span {
    cursor: pointer;
    display: inline-block;
    position: relative;
@@ -124,7 +123,7 @@
  .button:hover span:after {
    opacity: 1;
    right: 0;
- }
+ } */
  form {
     background-color: #b6f0f3;
     text-align: center;
@@ -152,7 +151,7 @@
     pointer-events: auto;
   }
 
-  input[type=submit]:hover {
+  .loginButton:hover {
     animation-name: gelatine;
     animation-duration: 3s;
 }
@@ -203,8 +202,8 @@
       width: 450px;
     }
 
-    input[type=button] {
-      font-size: 20px;
+    .loginButton {
+      font-size: 25px;
     }
 
     .submit {
@@ -242,6 +241,7 @@
     
     .dropdown{
       display: inline-block;
+      margin-bottom: 0%;
     }
   
     .topnav{
@@ -256,4 +256,27 @@
     .flex-container{
       margin-top: 0%;
     }
-  }  
+
+    form{
+      font-size: 8px;
+      height: 140px;
+      width: 150px;
+      margin-bottom: 2px;
+    }
+
+    .loginButton {
+      font-size: 7px;
+    }
+
+    input[type=text]::placeholder {
+      font-size: 7px;
+    }
+
+    p{
+      font-size: 8px;
+    }
+    input[type=text]{
+      height: 7px;
+      width: 80px;
+    }
+  }
