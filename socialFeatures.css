@@ -229,6 +229,13 @@ from, to { transform: scale(1, 1); }
   cursor: pointer;
 }
 
+.fa-solid.fa-trophy {
+  color: gold;
+  font-size: 25px;
+}
+
+
+
 @media screen and (min-width: 1700px){
 
   .topnav a {
@@ -356,3 +363,4 @@ from, to { transform: scale(1, 1); }
     font-size: 10px;
   }
 }
+
