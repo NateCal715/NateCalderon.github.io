@@ -25,7 +25,7 @@ const auth = getAuth()
 
 
 // Signing Users up with Email and Password
-const signupForm = document.querySelector('.signup')
+const signupForm = document.querySelector('.signUp')
 signupForm.addEventListener('submit', (e) => {
   e.preventDefault()
 
