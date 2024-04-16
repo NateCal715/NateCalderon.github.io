@@ -25,7 +25,7 @@ const auth = getAuth()
 
 
 // Signing Users up with Email and Password
-const signupForm = document.querySelector('.signUp')
+/*const signupForm = document.querySelector('.signUp')
 signupForm.addEventListener('submit', (e) => {
   e.preventDefault()
 
@@ -40,7 +40,31 @@ signupForm.addEventListener('submit', (e) => {
     .catch((err) => {
       console.log(err.message)
     })
-})
+})*/
+
+document.addEventListener('DOMContentLoaded', function() {
+  const signupForm = document.querySelector('.signUp');
+  if (signupForm) {
+      signupForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+
+          const email = signupForm.email.value;
+          const password = signupForm.password.value;
+
+          createUserWithEmailAndPassword(auth, email, password)
+              .then((cred) => {
+                  console.log('user created:', cred.user);
+                  signupForm.reset();
+              })
+              .catch((err) => {
+                  console.log(err.message);
+              });
+      });
+  } else {
+      console.log("Signup form element not found in the DOM.");
+  }
+});
+
 
 //Logging Users in and out
 const logoutButton = document.querySelector('.logout')
