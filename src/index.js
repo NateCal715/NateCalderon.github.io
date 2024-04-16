@@ -42,6 +42,29 @@ signupForm.addEventListener('submit', (e) => {
     })
 })*/
 
+/*document.addEventListener('DOMContentLoaded', function() {
+  const signupForm = document.querySelector('.signUp');
+  if (signupForm) {
+      signupForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+
+          const email = signupForm.email.value;
+          const password = signupForm.password.value;
+
+          createUserWithEmailAndPassword(auth, email, password)
+              .then((cred) => {
+                  console.log('user created:', cred.user);
+                  signupForm.reset();
+              })
+              .catch((err) => {
+                  console.log(err.message);
+              });
+      });
+  } else {
+      console.log("Signup form element not found in the DOM.");
+  }
+});*/
+
 document.addEventListener('DOMContentLoaded', function() {
   const signupForm = document.querySelector('.signUp');
   if (signupForm) {
@@ -64,6 +87,7 @@ document.addEventListener('DOMContentLoaded', function() {
       console.log("Signup form element not found in the DOM.");
   }
 });
+
 
 
 //Logging Users in and out
