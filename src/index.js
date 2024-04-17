@@ -47,7 +47,7 @@ signupForm.addEventListener('submit', (e) => {
 //DOM Overwrite 
 //document.addEventListener('DOMContentLoaded', function() {
 //Logging Users in and out
-const logoutButton = document.querySelector('.logout')
+const logoutButton = document.querySelector('.logoutButton')
 logoutButton.addEventListener('click', () => {
   signOut(auth)
     .then(() => {
