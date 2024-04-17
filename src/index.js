@@ -26,7 +26,7 @@ const auth = getAuth()
 //DOM Overwrite
 // document.addEventListener('DOMContentLoaded', function() {
 // Signing Users up with Email and Password
-const signupForm = document.querySelector('.signUp')
+const signupForm = document.querySelector('.signup')
 signupForm.addEventListener('submit', (e) => {
   e.preventDefault()
 
