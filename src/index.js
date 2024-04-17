@@ -21,7 +21,7 @@ const firebaseConfig = {
   const app = initializeApp(firebaseConfig);
 
 // init firebase services
-const auth = getAuth()
+const auth = getAuth(app)
 
 //DOM Overwrite
 // document.addEventListener('DOMContentLoaded', function() {
