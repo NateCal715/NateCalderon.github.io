@@ -141,13 +141,23 @@
     font-size: 20px;
   }    
 
-  input[type=text] {
+  .email {
     background-color: #003366;
     color: #b6f0f3;
     width: 150px;
   }
   
-  input[type=text]::placeholder {
+  .email::placeholder {
+    color: lightgray;
+  }
+
+  .password {
+    background-color: #003366;
+    color: #b6f0f3;
+    width: 150px;
+  }
+  
+  .password::placeholder {
     color: lightgray;
   }
   
@@ -227,11 +237,20 @@
       font-size: 20px;
     }
 
-    input[type=text]::placeholder {
+    .email::placeholder {
+      font-size: 20px;
+    }
+    
+    .email{
+      height: 30px;
+      width: 250px;
+    }
+
+    .password::placeholder {
       font-size: 20px;
     }
 
-    input[type=text]{
+    .password{
       height: 30px;
       width: 250px;
     }
@@ -284,16 +303,26 @@
     .loginButton {
       font-size: 7px;
     }
-    
-    input[type=text]::placeholder {
+
+    .email::placeholder {
       font-size: 7px;
+    }
+
+    .email{
+      height: 7px;
+      width: 80px;
+    }
+
+    .password::placeholder {
+      font-size: 7px;
+    }
+
+    .password{
+      height: 7px;
+      width: 80px;
     }
 
     p{
       font-size: 8px;
-    }
-    input[type=text]{
-      height: 7px;
-      width: 80px;
     }
   }
