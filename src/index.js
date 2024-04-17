@@ -24,7 +24,7 @@ const firebaseConfig = {
 const auth = getAuth()
 
 //DOM Overwrite
-document.addEventListener('DOMContentLoaded', function() {
+// document.addEventListener('DOMContentLoaded', function() {
 // Signing Users up with Email and Password
 const signupForm = document.querySelector('.signUp')
 signupForm.addEventListener('submit', (e) => {
@@ -43,12 +43,9 @@ signupForm.addEventListener('submit', (e) => {
     })
 })
 
-} else {
-  console.log("Signup form element not found in the DOM")
-} 
 
 //DOM Overwrite 
-document.addEventListener('DOMContentLoaded', function() {
+//document.addEventListener('DOMContentLoaded', function() {
 //Logging Users in and out
 const logoutButton = document.querySelector('.logout')
 logoutButton.addEventListener('click', () => {
@@ -61,9 +58,6 @@ logoutButton.addEventListener('click', () => {
     })
 })
 
-} else {
-  console.log("Logout Button element not found in the DOM.")
-}
 
 const loginForm = document.querySelector('.login')
 loginForm.addEventListener('submit', (e) => {
