@@ -10,11 +10,9 @@
       <a class="active" href="index.html">Home</a>
       <a href="sleepTracker.html">Sleep Tracker</a>
       <a href="workoutPlanner.html">Workout Planner</a>
-      <a href="NutritionDataBase.html">Meal Planner</a>
       <a href="socialFeatures.html">Achieve and Share</a>
       <a href="MeetTheTeam.html">Meet the Team!</a>
-      <a href="login.html">Log In</a>
-      <a href="signUp.html">Sign Up</a>
+      <a href="signUp&login.html">Login or Sign Up</a>
       <div class="align-right">
         <a href="worksCited.html" class="worksCited" >Works Cited</a>
       </div>
@@ -25,11 +23,9 @@
         <a class="active" href="index.html">Home</a>
         <a href="sleepTracker.html">Sleep Tracker</a>
         <a href="workoutPlanner.html">Workout Planner</a>
-        <a href="NutritionDataBase.html">Meal Planner</a>
         <a href="socialFeatures.html">Achieve and Share</a>
         <a href="MeetTheTeam.html">Meet the Team!</a>
-        <a href="login.html">Log In</a>
-        <a href="signUp.html">Sign Up</a>
+        <a href="signUp&login.html">Login or Sign Up</a>
         <a href="worksCited.html" class="worksCited" >Works Cited</a>
       </div>
     </nav>
@@ -120,139 +116,32 @@
         }
       }
     </script>
-      <!-- Want to make it so when Food Allergies is selected, a text box appears and prompts users to input specific Food(s) -->
-      <!-- <div id="allergyBox" style="display: none;">
-      <label for="allergies">Enter Specific Food Allergies:</label><br>
-      <input type="text" id="allergies" name="allergies"><br>
-      </div>
-
-
-<script>
-    function showTextBox() {
-        var allergyBox = document.getElementById("allergyBox");
-        if (document.getElementById("FoodAllergies").checked) {
-            allergyBox.style.display = "block";
-        } else {
-            allergyBox.style.display = "none";
-        }
-    }
-</script> --> 
       <br>     
     </p1>
-    <section>
+    <section id="food entry">
       <p2>
-            <!-- Container for text entry boxes -->
+          <h3>Enter your Food Intake from Today</h3>
           <div id="foodInput">
             <input type="text" id="food" placeholder="Enter food">
             <button class="search" onclick="fetchData()">Search</button><br>
           </div>
             <div id="results-container"></div>
-            
             <script src="ImplementAPI.js"></script>
       </p2>
-  <!--
-        <h3>What did you eat today?</h3>
-     <div class="breakfastButton">
-      <button class="Breakfast" onClick="showBreakfast()">Breakfast</button>
-     </div>
-       <div class="lunchButton">
-      <button class="Lunch" onClick="showLunch()">Lunch</button>
-       </div>
-       <div class="showDinner">
-      <button class="Dinner" onClick="showDinner()">Dinner</button>
-       </div>
-      <br>
-      -->
-<!--<div class="flex-container">-->
-<!--
-   <form name="mealformBreakfast" action="" method="GET">
-     <label for="entree">Entree</label>
-     <input type="text" name="entreeInput" value=""><br>
-     <label for="appetizer">Appetizer</label>
-     <input type="text" name="appetizerInput" value=""><br>
-     <label for="beverage">Beverage</label>
-     <input type="text" name="beverageInput" value=""><br>
-     <input type="button" value="Submit" onClick="breakfastIntake(this.form)">
-   </form>
-     
-   <form name="mealformLunch" action="" method="GET">
-     <label for="entree">Entree</label>
-     <input type="text" name="entreeInput" value=""><br>
-     <label for="appetizer">Appetizer</label>
-     <input type="text" name="appetizerInput" value=""><br>
-     <label for="beverage">Beverage</label>
-     <input type="text" name="beverageInput" value=""><br>
-     <input type="button" value="Submit" onClick="lunchIntake(this.form)">
-   </form>
-   <form name="mealformDinner" action="" method="GET">
-     <label for="entree">Entree</label>
-     <input type="text" name="entreeInput" value=""><br>
-     <label for="appetizer">Appetizer</label>
-     <input type="text" name="appetizerInput" value=""><br>
-     <label for="beverage">Beverage</label>
-     <input type="text" name="beverageInput" value=""><br>
-     <input type="button" value="Submit" onClick="dinnerIntake(this.form)">
-   </form>
-  -->
-<!--</div>-->
-    <p3>
-      <form name = "waterForm" action="" method="GET">
-        <h3>Water Intake</h3>
+      <p3>
+        <form name = "waterForm" action="" method="GET">
+        <h3>Enter your Water Intake from Today</h3>
         <!-- <label for="water">Water by fl oz</label> -->
         <div class="water">
           <input type="text" name="waterInput" value="" placeholder="Water by fl oz">
           <input type="button" class="log" value="Log" onClick="waterIntake(this.form)">
         </div>
-      </form> 
-      <div class="messages">
-      <h2 id="waterValue"></h2>
-    </div>
-      <script>   
-      hideMeals();
-          function hideMeals(){
-      mealformBreakfast.style.display = "none";
-      mealformLunch.style.display = "none";
-      mealformDinner.style.display = "none";
-      heading.style.display = "none";
-          }
-          function showBreakfast(){
-      mealformBreakfast.style.display = "block";
-      mealformLunch.style.display = "none";
-      mealformDinner.style.display = "none";
-      heading.style.display = "block";
-          }
-          function showLunch(){
-      mealformBreakfast.style.display = "none";
-      mealformLunch.style.display = "block";
-      mealformDinner.style.display = "none";
-      heading.style.display = "block";
-          }
-          function showDinner(){
-      mealformBreakfast.style.display = "none";
-      mealformLunch.style.display = "none";
-      mealformDinner.style.display = "block";
-      heading.style.display = "block";
-          }
-        
-          function breakfastIntake (form) {
-            let entree = form.entreeInput.value;
-            let appetizer = form.appetizerInput.value;
-            let beverage = form.beverageInput.value;
-            let displayMessage = "You have not recorded anything consumed on this day";
-
-            if (!isEmpty(entree)) {
-              displayMessage = 'You recorded ${entree} eaten during breakfast on this day';
-            }
-            if (!isEmpty(appetizer)) {
-              displayMessage = 'You recorded ${appetizer} eaten during breakfast on this day';
-            }
-            if (!isEmpty(beverage)) {
-              displayMessage = 'You recorded ${beverage} drank during breakfast on this day';
-            } 
-          document.getElementbyId("breakfastValue").innerHTML = displayMessage;
-          }
-        
-          function waterIntake (form) {
+        </form> 
+        <div class="messages">
+        <h2 id="waterValue"></h2>
+      </div>
+        <script>       
+        function waterIntake (form) {
         let water = form.waterInput.value;
         let displayMessage = "You have not drank any water today";
 
