@@ -255,6 +255,7 @@ html{
     input[type=text]{
       height: 30px;
       width: 70px;
+      font-size: 20px;
     }
 
     h2{
