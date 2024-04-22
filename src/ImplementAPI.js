@@ -4,6 +4,8 @@
 
 let selectedFood = null;
 let foods = [];
+let calcount = 0;
+let selectedFoods = [];
 
 async function fetchData() { // fetch food data from API
     try {
@@ -59,13 +61,34 @@ function selectFood(fdcId) { // allow users to select a food from the list
     const selectedFoodItem = foods.find(food => food.fdcId === fdcId);
     if (selectedFoodItem) {
         selectedFood = selectedFoodItem;
-        alert(`Selected: ${selectedFoodItem.description}`);
+        const listItem = document.createElement('li');
+        listItem.textContent = `${selectedFoodItem.description} - Calories: ${getCalories(selectedFoodItem.foodNutrients)}`;
+        const selectedItemsList = document.getElementById('selected-items');
+        selectedItemsList.appendChild(listItem);
+        updateTotal();
     }
-}function addTextBox() {
+}
+function addTextBox() {
     const textEntry = document.querySelector('.text-entry');
     const clonedTextEntry = textEntry.cloneNode(true);
     clonedTextEntry.value - "";
     document.getElementbyId('text-entry-container').appendChild(clonedTextEntry);
 }
-
-
+function listTotal() {
+    const resultsContainer = document.getElementById('results-container2');
+    resultsContainer.innerHTML = `
+        <p>Total : ${calcount}</p>
+   `
+}
+function updateTotal() {
+    let totalCalories = 0;
+    const selectedItemsList = document.getElementById('selected-items');
+    selectedItemsList.childNodes.forEach(item => {
+        const caloriesText = item.textContent.match(/Calories: (\d+)/);
+        if (caloriesText) {
+            totalCalories += parseInt(caloriesText[1]);
+        }
+    });
+    const totalCaloriesElement = document.getElementById('total-calories');
+    totalCaloriesElement.textContent = `Total Calories: ${totalCalories}`;
+}
