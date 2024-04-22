@@ -272,7 +272,7 @@ function updateDisplayName() {
     document.getElementById('status-message').textContent = 'No user signed in';
   }
 }*/
-// Get Elements
+/*// Get Elements
 var currentDisplayNameInput = document.getElementById("current-display-name");
 var newDisplayNameInput = document.getElementById("new-display-name");
 var updateButton = document.querySelector(".updateNameButton");
@@ -319,4 +319,4 @@ firebase.auth().onAuthStateChanged(function(user) {
     // No user is signed in
     currentDisplayNameInput.value = "N/A";
   }
-});
+});*/
