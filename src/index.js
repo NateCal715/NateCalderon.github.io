@@ -39,7 +39,7 @@ initializeApp(firebaseConfig)
 // init firebase services
 const db = getFirestore()
 const auth = getAuth()
-const database = getDatabase(app);
+const database = getDatabase();
 
 // authentication tutorials: user ref
 const user = auth.currentUser
@@ -141,7 +141,7 @@ updateForm.addEventListener('submit', (e) => {
 //})
 
 
-// authentication tutorials: signing users up 
+// authentication: signing users up 
 const signupForm = document.querySelector('.signup')
 signupForm.addEventListener('submit', (e) => {
   e.preventDefault()
@@ -178,13 +178,13 @@ loginForm.addEventListener('submit', (e) => {
 })
 
 
-// authentication tutorials: subscribing to auth changes
+// authentication: subscribing to auth changes
 /*const unsubAuth = onAuthStateChanged(auth, (user) => {
   console.log('user status changed:', user)
 })*/
 
 
-// authentication tutorials: unsubscribing from changes (auth & db)
+// authentication: unsubscribing from changes (auth & db)
 /*const unsubButton = document.querySelector('.unsub')
 unsubButton.addEventListener('click', () => {
   console.log('unsubscribing')
@@ -193,7 +193,7 @@ unsubButton.addEventListener('click', () => {
   unsubAuth()
 })*/
 
-// authentication tutorials: Get the currently signed in User
+// authentication: Get the currently signed in User
 onAuthStateChanged(auth, (user) => {
   if (user) {
     // User is signed in, see docs for a list of available properties
@@ -206,7 +206,7 @@ onAuthStateChanged(auth, (user) => {
   }
 });
 
-// authentication tutorials: Get a user's profile
+// authentication: Get a user's profile
 
 if (user !== null) {
   // The user object has basic properties such as display name, email, etc.
@@ -221,7 +221,7 @@ if (user !== null) {
   const uid = user.uid;
 }
 
-// authentication tutorials: Get a user's provider-specific profile information
+// authentication: Get a user's provider-specific profile information
 if (user !== null) {
   user.providerData.forEach((profile) => {
     console.log("Sign-in provider: " + profile.providerId);
@@ -231,6 +231,7 @@ if (user !== null) {
     console.log("  Photo URL: " + profile.photoURL);
   });
 } 
+
 // realtime database: Writing Data
 function writeUserData(userId, name, email, imageUrl) {
   const db = getDatabase();
