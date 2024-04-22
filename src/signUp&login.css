@@ -189,6 +189,16 @@
   .password::placeholder {
     color: lightgray;
   }
+
+  .displayName{
+    background-color: #003366;
+    color: #b6f0f3;
+    width: 150px;
+  }
+  
+  .displayName::placeholder {
+    color: lightgray;
+  }
   
   input[type=submit] {
     background-color: #003366;
@@ -255,7 +265,7 @@
 
     form{
       font-size: 25px;
-      height: 330px;
+      height: 440px;
       width: 450px;
     }
 
@@ -293,6 +303,15 @@
       width: 250px;
     }
 
+    .displayName::placeholder {
+      font-size: 20px;
+    }
+
+    .displayName{
+      height: 30px;
+      width: 250px;
+    }
+
     p{
       font-size: 25px;
     }
@@ -303,14 +322,14 @@
     } 
 
     .flex-container{
-      margin-top: 7%;
+      margin-top: 2%;
     }
   }
 
   @media screen and (max-width: 545px){
 
     h1{
-      font-size: 20px;
+      font-size: 15px;
     }
     
     .dropdown{
@@ -333,7 +352,7 @@
 
     form{
       font-size: 8px;
-      height: 120px;
+      height: 150px;
       width: 150px;
       margin-bottom: 2px;
     }
@@ -364,6 +383,15 @@
     }
 
     .password{
+      height: 7px;
+      width: 80px;
+    }
+
+    .displayName::placeholder {
+      font-size: 7px;
+    }
+
+    .displayName{
       height: 7px;
       width: 80px;
     }
