@@ -41,7 +41,7 @@ function displayResults(foods) { //display food on page
             <h3>${description}</h3>
             <p>Ingredients: ${ingredients}</p>
             <p>Calories: ${calories}</p>
-            <button onclick="selectFood(${food.fdcId})">Select</button>
+            <button class="select" onclick="selectFood(${food.fdcId})">Select</button>
         `;
 
         resultsContainer.appendChild(foodDiv);
