@@ -123,16 +123,16 @@ updateForm.addEventListener('submit', (e) => {
 })*/
 
 // authentication tutorials: logging in and out
-const logoutButton = document.querySelector('.logoutButton')
-logoutButton.addEventListener('click', () => {
-  signOut(auth)
-    .then(() => {
-      console.log('the user signed out')
-    })
-    .catch((err) => {
-      console.log(err.message)
-    })
-})
+// const logoutButton = document.querySelector('.logoutButton')
+// logoutButton.addEventListener('click', () => {
+//  signOut(auth)
+//    .then(() => {
+//      console.log('the user signed out')
+//    })
+//    .catch((err) => {
+//      console.log(err.message)
+//    })
+//})
 
 
 // authentication tutorials: signing users up 
