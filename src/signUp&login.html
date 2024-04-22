@@ -70,13 +70,13 @@
         <h3>Update Profile Information</h3>
         <label for="current-display-name">Current Display Name:</label>
         <br>
-        <input type="text" name="current-display-name">
+        <input type="text" id="current-display-name" name="current-display-name" disabled>
         <br><br>
         <label for="new-display-name">New Display Name:</label>
         <br>
-        <input type="text" class="newDisplayName" name="new-display-name" placeholder="New display name">
+        <input type="text" id="new-display-name" name="new-display-name" placeholder="New display name">
         <br><br>
-        <button class="updateNameButton" onclick="updateDisplayName()">Update Display Name</button>
+        <button type="button" class="updateNameButton">Update Display Name</button>
         <p id="status-message"></p>
       </form>
     </main>

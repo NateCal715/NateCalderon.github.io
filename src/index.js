@@ -20,6 +20,7 @@ import {
   getDatabase,
   ref, set
 } from 'firebase/database'
+import firebase from 'firebase/compat/app';
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
@@ -242,7 +243,7 @@ function writeUserData(userId, name, email, imageUrl) {
   });
 }
 
-auth.onAuthStateChanged(function(user) {
+/*auth.onAuthStateChanged(function(user) {
   if (user) {
     // User is signed in
     document.getElementById('current-display-name').value = user.displayName || 'No display name set';
@@ -270,4 +271,52 @@ function updateDisplayName() {
     // No user signed 
     document.getElementById('status-message').textContent = 'No user signed in';
   }
+}*/
+// Get Elements
+var currentDisplayNameInput = document.getElementById("current-display-name");
+var newDisplayNameInput = document.getElementById("new-display-name");
+var updateButton = document.querySelector(".updateNameButton");
+var statusMessage = document.getElementById("status-message");
+
+//Function to update display name
+function updateDisplayName() {
+  var newDisplayName = newDisplayNameInput.value.trim();
+
+  if (!newDisplayName) {
+    statusMessage.textContent = "Please enter a new display name.";
+    return;
+  }
+
+  // Get the current user
+  var user = firebase.auth().currentUser;
+
+  // Update the user's profile
+  user.updateProfile({
+    displayName: newDisplayName
+  }).then(function() {
+    // Update successful
+    statusMessage.textContent = "Display name updated successfully to: " + newDisplayName;
+    // Update current display name input for user feedback
+    currentDisplayNameInput.value = newDisplayName;
+    // Clear new display name input 
+    newDisplayNameInput.value = "";
+  }).catch(function(error) {
+    // Message for when an error occurs
+    statusMessage.textContent = "Error updating display name: " + error.message;
+  });
 }
+
+// Click event listener to update button
+updateButton.addEventListener("click", updateDisplayName);
+
+// Listen for auth state changes
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    // User is signed in
+    var currentDisplayName = user.displayName;
+    currentDisplayNameInput.value = currentDisplayName;
+  } else {
+    // No user is signed in
+    currentDisplayNameInput.value = "N/A";
+  }
+});
