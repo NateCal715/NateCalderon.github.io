@@ -16,6 +16,10 @@ import {
   signOut, signInWithEmailAndPassword,
   onAuthStateChanged
 } from 'firebase/auth'
+import {
+  getDatabase,
+  ref, set
+} from 'firebase/database'
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
@@ -25,7 +29,8 @@ const firebaseConfig = {
   storageBucket: "health-tracker-dbc6d.appspot.com",
   messagingSenderId: "164968132870",
   appId: "1:164968132870:web:68aa1101d18ca26deeae87",
-  measurementId: "G-W4LRQT3X59"
+  measurementId: "G-W4LRQT3X59",
+  databaseURL: "https://health-tracker-dbc6d-default-rtdb.firebaseio.com/"
 };
 
 // init firebase app
@@ -34,6 +39,7 @@ initializeApp(firebaseConfig)
 // init firebase services
 const db = getFirestore()
 const auth = getAuth()
+const database = getDatabase(app);
 
 // authentication tutorials: user ref
 const user = auth.currentUser
@@ -225,3 +231,12 @@ if (user !== null) {
     console.log("  Photo URL: " + profile.photoURL);
   });
 } 
+
+function writeUserData(userId, name, email, imageUrl) {
+  const db = getDatabase();
+  set(ref(db, 'users/' + userId), {
+    username: name,
+    email: email,
+    profile_picture : imageUrl
+  });
+}
