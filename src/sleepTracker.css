@@ -107,6 +107,7 @@ label{
     margin-left: 47%;
     border-radius: 5px;
     font-size: 18px;
+    margin-top: 15px;
 }
 
 .calculate:hover{
@@ -179,6 +180,8 @@ label{
 
 #videoOptionsForm button:hover {
     background-color: #001933; 
+    animation-name: gelatine;
+    animation-duration: 3s;
 }
 
 .video-options h3 {
@@ -235,6 +238,11 @@ label{
     cursor: pointer;
     margin-top: 10px; /* Spacing above the button */
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+#sleepGoalForm button:hover{
+    animation-name: gelatine;
+    animation-duration: 3s;
 }
 
 #sleepGoalMessage {
@@ -312,7 +320,46 @@ label{
         margin-top: 20px;
         margin-left: 6%;
     }
-  }
+
+    #videoOptionsForm {
+       font-size: 20px;
+    }
+
+    #videoOptionsForm button {
+        font-size: 20px;
+    }
+
+    .video-options h3 {
+        font-size: 25px;
+    }
+
+    #sleepGoalForm {
+        font-size: 20px;
+    }
+
+    #sleepGoalForm button {
+        font-size: 20px;
+    }
+
+    #sleepGoalMessage {
+        font-size: 20px;
+    }
+
+    .sleep-goal h3 {
+        font-size: 25px;
+    }
+
+    .sleepGoalInput{
+        font-size: 20px;
+    }
+
+    .goalInput{
+        font-size: 20px;
+        background-color: #003366;
+        color: #b6f0f3;
+        pointer-events: auto;
+    }
+}
 
   @media screen and (max-width: 545px){
     h1{
@@ -363,7 +410,15 @@ label{
     .sleep-recommendations ul,
     .sleep-recommendations ul li {
         font-size: 60%;
-}
+    }
+
+    .video-options{
+        display: none;
+    }
+
+    .sleep-goal{
+        display: none;
+    }
 }  
 
 @media screen and (min-width: 1900px){
