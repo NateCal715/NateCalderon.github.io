@@ -124,6 +124,20 @@
   margin: 5px;
   cursor: pointer;
 }
+
+.updateNameButton {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #003366;
+  border: none;
+  color: #b6f0f3;
+  text-align: center;
+  font-size: 20px;
+  padding: 5px;
+  margin: 5px;
+  cursor: pointer;
+}
+ 
  
  /* .button span {
    cursor: pointer;
@@ -182,13 +196,23 @@
     color: lightgray;
   }
 
-  .displayName{
+  .currentDisplayName{
     background-color: #003366;
     color: #b6f0f3;
     width: 150px;
   }
   
-  .displayName::placeholder {
+  .currentDisplayName::placeholder {
+    color: lightgray;
+  }
+
+  .newDisplayName{
+    background-color: #003366;
+    color: #b6f0f3;
+    width: 150px;
+  }
+  
+  .newDisplayName::placeholder {
     color: lightgray;
   }
   
@@ -215,6 +239,13 @@
   animation-name: gelatine;
   animation-duration: 3s;
 }
+
+
+.updateNameButton:hover {
+  animation-name: gelatine;
+  animation-duration: 3s;
+}
+
   @keyframes gelatine {
     from, to { transform: scale(1, 1); }
     25% { transform: scale(0.8, 1.0); }
@@ -257,8 +288,10 @@
 
     form{
       font-size: 25px;
-      height: 440px;
+      height: 360px;
       width: 450px;
+      margin-bottom: 2%;
+
     }
 
     .loginButton {
@@ -270,6 +303,10 @@
     }
 
     .signUpButton{
+      font-size: 25px;
+    }
+
+    .updateNameButton{
       font-size: 25px;
     }
 
@@ -295,14 +332,24 @@
       width: 250px;
     }
 
-    .displayName::placeholder {
+    .currentDisplayName::placeholder {
       font-size: 20px;
     }
 
-    .displayName{
+    .currentDisplayName{
       height: 30px;
       width: 250px;
     }
+
+    .newDisplayName::placeholder {
+      font-size: 20px;
+    }
+
+    .newDisplayName{
+      height: 30px;
+      width: 250px;
+    }
+
 
     p{
       font-size: 25px;
@@ -344,9 +391,9 @@
 
     form{
       font-size: 8px;
-      height: 150px;
+      height: 120px;
       width: 150px;
-      margin-bottom: 2px;
+      margin-bottom: 2%;
     }
 
     .loginButton {
@@ -358,6 +405,10 @@
     }
 
     .logoutButton{
+      font-size: 7px;
+    }
+
+    .updateNameButton{
       font-size: 7px;
     }
 
@@ -379,11 +430,20 @@
       width: 80px;
     }
 
-    .displayName::placeholder {
+    .currentDisplayName::placeholder {
       font-size: 7px;
     }
 
-    .displayName{
+    .currentDisplayName{
+      height: 7px;
+      width: 80px;
+    }
+
+    .newDisplayName::placeholder {
+      font-size: 7px;
+    }
+
+    .newDisplayName{
       height: 7px;
       width: 80px;
     }
