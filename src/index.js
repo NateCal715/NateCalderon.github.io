@@ -20,6 +20,7 @@ import {
   getDatabase,
   ref, set
 } from 'firebase/database'
+import firebase from 'firebase/compat/app';
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
@@ -39,7 +40,7 @@ initializeApp(firebaseConfig)
 // init firebase services
 const db = getFirestore()
 const auth = getAuth()
-const database = getDatabase(app);
+const database = getDatabase();
 
 // authentication tutorials: user ref
 const user = auth.currentUser
@@ -141,7 +142,7 @@ updateForm.addEventListener('submit', (e) => {
 //})
 
 
-// authentication tutorials: signing users up 
+// authentication: signing users up 
 const signupForm = document.querySelector('.signup')
 signupForm.addEventListener('submit', (e) => {
   e.preventDefault()
@@ -178,13 +179,13 @@ loginForm.addEventListener('submit', (e) => {
 })
 
 
-// authentication tutorials: subscribing to auth changes
+// authentication: subscribing to auth changes
 /*const unsubAuth = onAuthStateChanged(auth, (user) => {
   console.log('user status changed:', user)
 })*/
 
 
-// authentication tutorials: unsubscribing from changes (auth & db)
+// authentication: unsubscribing from changes (auth & db)
 /*const unsubButton = document.querySelector('.unsub')
 unsubButton.addEventListener('click', () => {
   console.log('unsubscribing')
@@ -193,7 +194,7 @@ unsubButton.addEventListener('click', () => {
   unsubAuth()
 })*/
 
-// authentication tutorials: Get the currently signed in User
+// authentication: Get the currently signed in User
 onAuthStateChanged(auth, (user) => {
   if (user) {
     // User is signed in, see docs for a list of available properties
@@ -206,7 +207,7 @@ onAuthStateChanged(auth, (user) => {
   }
 });
 
-// authentication tutorials: Get a user's profile
+// authentication: Get a user's profile
 
 if (user !== null) {
   // The user object has basic properties such as display name, email, etc.
@@ -221,7 +222,7 @@ if (user !== null) {
   const uid = user.uid;
 }
 
-// authentication tutorials: Get a user's provider-specific profile information
+// authentication: Get a user's provider-specific profile information
 if (user !== null) {
   user.providerData.forEach((profile) => {
     console.log("Sign-in provider: " + profile.providerId);
@@ -231,6 +232,7 @@ if (user !== null) {
     console.log("  Photo URL: " + profile.photoURL);
   });
 } 
+
 // realtime database: Writing Data
 function writeUserData(userId, name, email, imageUrl) {
   const db = getDatabase();
@@ -241,7 +243,7 @@ function writeUserData(userId, name, email, imageUrl) {
   });
 }
 
-auth.onAuthStateChanged(function(user) {
+/*auth.onAuthStateChanged(function(user) {
   if (user) {
     // User is signed in
     document.getElementById('current-display-name').value = user.displayName || 'No display name set';
@@ -269,4 +271,52 @@ function updateDisplayName() {
     // No user signed 
     document.getElementById('status-message').textContent = 'No user signed in';
   }
+}*/
+/*// Get Elements
+var currentDisplayNameInput = document.getElementById("current-display-name");
+var newDisplayNameInput = document.getElementById("new-display-name");
+var updateButton = document.querySelector(".updateNameButton");
+var statusMessage = document.getElementById("status-message");
+
+//Function to update display name
+function updateDisplayName() {
+  var newDisplayName = newDisplayNameInput.value.trim();
+
+  if (!newDisplayName) {
+    statusMessage.textContent = "Please enter a new display name.";
+    return;
+  }
+
+  // Get the current user
+  var user = firebase.auth().currentUser;
+
+  // Update the user's profile
+  user.updateProfile({
+    displayName: newDisplayName
+  }).then(function() {
+    // Update successful
+    statusMessage.textContent = "Display name updated successfully to: " + newDisplayName;
+    // Update current display name input for user feedback
+    currentDisplayNameInput.value = newDisplayName;
+    // Clear new display name input 
+    newDisplayNameInput.value = "";
+  }).catch(function(error) {
+    // Message for when an error occurs
+    statusMessage.textContent = "Error updating display name: " + error.message;
+  });
 }
+
+// Click event listener to update button
+updateButton.addEventListener("click", updateDisplayName);
+
+// Listen for auth state changes
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    // User is signed in
+    var currentDisplayName = user.displayName;
+    currentDisplayNameInput.value = currentDisplayName;
+  } else {
+    // No user is signed in
+    currentDisplayNameInput.value = "N/A";
+  }
+});*/
