@@ -142,9 +142,9 @@ signupForm.addEventListener('submit', (e) => {
 
   const email = signupForm.email.value
   const password = signupForm.password.value
-  const displayName = signupForm.displayName.value
+//  const displayName = signupForm.displayName.value
 
-  createUserWithEmailAndPassword(auth, email, password, displayName)
+  createUserWithEmailAndPassword(auth, email, password, /*displayName*/)
     .then((cred) => {
       console.log('user created:', cred.user)
       signupForm.reset()
