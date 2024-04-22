@@ -231,7 +231,7 @@ if (user !== null) {
     console.log("  Photo URL: " + profile.photoURL);
   });
 } 
-
+// realtime database: Writing Data
 function writeUserData(userId, name, email, imageUrl) {
   const db = getDatabase();
   set(ref(db, 'users/' + userId), {
@@ -239,4 +239,34 @@ function writeUserData(userId, name, email, imageUrl) {
     email: email,
     profile_picture : imageUrl
   });
+}
+
+auth.onAuthStateChanged(function(user) {
+  if (user) {
+    // User is signed in
+    document.getElementById('current-display-name').value = user.displayName || 'No display name set';
+  } else {
+    // User is signed out
+    console.log('No user signed in');
+  }
+});
+
+function updateDisplayName() {
+  var newDisplayName = document.getElementById('new-display-name').value;
+  var user = auth.currentUser;
+  
+  if (user) {
+    user.updateProfile({
+      displayName: newDisplayName
+    }).then(function() {
+      // Update successful
+      document.getElementById('status-message').textContent = 'Display name updated successfully';
+    }).catch(function(error) {
+      // An error occurred 
+      document.getElementById('status-message').textContent = 'Error updating display name: ' + error.message;
+    });
+  } else {
+    // No user signed 
+    document.getElementById('status-message').textContent = 'No user signed in';
+  }
 }
