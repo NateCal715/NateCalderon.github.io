@@ -67,16 +67,16 @@
         <br>
       </form>
       <form class="update-profile">
-        <h4>Update Profile Information</h4>
+        <h3>Update Profile Information</h3>
         <label for="current-display-name">Current Display Name:</label>
         <br>
-        <input type="text" name="current-display-name" disabled>
+        <input type="text" class="currentDisplayName" name="current-display-name" placeholder="Current display name" disabled>
         <br><br>
         <label for="new-display-name">New Display Name:</label>
         <br>
-        <input type="text" name="new-display-name">
+        <input type="text" class="newDisplayName" name="new-display-name" placeholder="New display name">
         <br><br>
-        <button onclick="updateDisplayName()">Update Display Name</button>
+        <button class="updateNameButton" onclick="updateDisplayName()">Update Display Name</button>
         <p id="status-message"></p>
       </form>
     </main>
