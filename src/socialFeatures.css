@@ -2,15 +2,6 @@ html {
   background-color: #1A1235;
 }
 
-* {
-  margin: 0;
-}
-
-body { 
-  line-height: 1.6;
-  padding: 20px;
-}
-
 h1{
   color: #b6f0f3;
   font-size: 30px;
